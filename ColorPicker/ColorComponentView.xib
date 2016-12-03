@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ColorComponentView" customModule="ColorPicker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="411" height="47"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mn0-Rh-R1X">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjk-6j-rRJ">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="255" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RO-4g-IK4">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBG-43-oVD">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Jjk-6j-rRJ" firstAttribute="leading" secondItem="mn0-Rh-R1X" secondAttribute="trailing" id="09a-gT-A6b"/>
+                <constraint firstItem="1RO-4g-IK4" firstAttribute="width" secondItem="mn0-Rh-R1X" secondAttribute="width" id="6kE-SN-BDH"/>
+                <constraint firstItem="Jjk-6j-rRJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7U1-kY-6f8"/>
+                <constraint firstItem="mn0-Rh-R1X" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EOX-54-hlw"/>
+                <constraint firstItem="Jjk-6j-rRJ" firstAttribute="width" secondItem="mn0-Rh-R1X" secondAttribute="width" id="FKP-e9-1oP"/>
+                <constraint firstAttribute="trailing" secondItem="cBG-43-oVD" secondAttribute="trailing" id="SUo-fM-BvK"/>
+                <constraint firstItem="mn0-Rh-R1X" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Tc9-fN-r5n"/>
+                <constraint firstAttribute="bottom" secondItem="Jjk-6j-rRJ" secondAttribute="bottom" id="VbU-su-xTZ"/>
+                <constraint firstAttribute="bottom" secondItem="1RO-4g-IK4" secondAttribute="bottom" id="WCR-yr-s13"/>
+                <constraint firstAttribute="bottom" secondItem="mn0-Rh-R1X" secondAttribute="bottom" id="Wjc-GP-vRJ"/>
+                <constraint firstAttribute="bottom" secondItem="cBG-43-oVD" secondAttribute="bottom" id="ZNg-3i-rt2"/>
+                <constraint firstItem="cBG-43-oVD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aDO-7h-7ko"/>
+                <constraint firstItem="1RO-4g-IK4" firstAttribute="leading" secondItem="Jjk-6j-rRJ" secondAttribute="trailing" id="gCu-TF-Keq"/>
+                <constraint firstItem="cBG-43-oVD" firstAttribute="leading" secondItem="1RO-4g-IK4" secondAttribute="trailing" id="m9N-HJ-H2p"/>
+                <constraint firstItem="cBG-43-oVD" firstAttribute="width" secondItem="mn0-Rh-R1X" secondAttribute="width" id="paF-It-UUG"/>
+                <constraint firstItem="1RO-4g-IK4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wgD-sf-hAy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="componentTitleLabel" destination="mn0-Rh-R1X" id="JfG-Io-Lui"/>
+                <outlet property="decValueLabel" destination="1RO-4g-IK4" id="mdm-6S-VUb"/>
+                <outlet property="hexValueLabel" destination="Jjk-6j-rRJ" id="gVl-0H-OIK"/>
+                <outlet property="normalizedValueLabel" destination="cBG-43-oVD" id="1lx-wa-efV"/>
+            </connections>
+            <point key="canvasLocation" x="-65.5" y="618.5"/>
+        </view>
+    </objects>
+</document>
