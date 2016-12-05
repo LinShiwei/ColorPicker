@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Co1-m4-Kyb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Co1-m4-Kyb">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
@@ -22,22 +25,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wq5-Jd-QZR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CollectedColorTableViewCell" rowHeight="88" id="Q9B-Kq-tbc" customClass="CollectedColorTableViewCell" customModule="ColorPicker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="88"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q9B-Kq-tbc" id="Uf8-4c-v9u">
-                                            <frame key="frameInset" width="320" height="87"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmI-zt-qGc">
+                                                    <rect key="frame" x="16" y="8" width="72" height="72"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="72" id="Mpt-cf-lDX"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1eA-HX-20e" customClass="CellComponentsContainerView" customModule="ColorPicker" customModuleProvider="target">
+                                                    <rect key="frame" x="96" y="8" width="208" height="72"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
@@ -52,7 +58,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="colorView" destination="pmI-zt-qGc" id="Nt3-TV-v8g"/>
+                                            <outlet property="colorIndicationView" destination="pmI-zt-qGc" id="zdj-Rn-y3K"/>
                                             <outlet property="componentsContainer" destination="1eA-HX-20e" id="b4u-0y-eTp"/>
                                         </connections>
                                     </tableViewCell>
@@ -78,7 +84,7 @@
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="Ah9-I2-M3m">
+                            <barButtonItem title="Make" id="Ah9-I2-M3m">
                                 <connections>
                                     <segue destination="fDO-el-IvG" kind="show" id="bQa-Ea-zaQ"/>
                                 </connections>
@@ -111,44 +117,71 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTl-8e-mWf">
+                                <rect key="frame" x="8" y="72" width="304" height="252"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDE-tI-EdN">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDE-tI-EdN" customClass="InputButtonsContainerView" customModule="ColorPicker" customModuleProvider="target">
+                                <rect key="frame" x="8" y="408" width="304" height="152"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZcL-Yb-5da">
+                                        <rect key="frame" x="0.0" y="101.5" width="304" height="50.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ks3-9z-em0">
+                                                <rect key="frame" x="0.0" y="0.0" width="50.5" height="50.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Ks3-9z-em0" secondAttribute="height" multiplier="45:45" id="Vs6-Cq-TXx"/>
                                                 </constraints>
                                                 <state key="normal" title="1">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="iWb-fO-Aag"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGO-BJ-0H8">
+                                                <rect key="frame" x="50.5" y="0.0" width="51" height="50.5"/>
                                                 <state key="normal" title="2">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="zHU-gW-OwR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40f-jG-Ewc">
+                                                <rect key="frame" x="101.5" y="0.0" width="50.5" height="50.5"/>
                                                 <state key="normal" title="3">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="CmO-iY-Uac"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne7-Qz-lzd">
+                                                <rect key="frame" x="152" y="0.0" width="50.5" height="50.5"/>
                                                 <state key="normal" title="0">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="jwj-Yn-9vW"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ub6-96-7dd">
+                                                <rect key="frame" x="202.5" y="0.0" width="51" height="50.5"/>
                                                 <state key="normal" title="Tab">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="5PE-aQ-18J"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCw-y7-tfL">
+                                                <rect key="frame" x="253.5" y="0.0" width="50.5" height="50.5"/>
                                                 <state key="normal" title="Clear">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="0Rm-j8-bEi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -180,39 +213,64 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9C-Wx-E9P">
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="50.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h50-f1-EVy">
+                                                <rect key="frame" x="0.0" y="0.0" width="50.5" height="50.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="h50-f1-EVy" secondAttribute="height" multiplier="45:45" id="HJe-VD-KDc"/>
                                                 </constraints>
                                                 <state key="normal" title="7">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="yt9-ON-oIP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5G-nh-rCq">
+                                                <rect key="frame" x="50.5" y="0.0" width="51" height="50.5"/>
                                                 <state key="normal" title="8">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="0PY-ck-7en"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzL-zr-Ro8">
+                                                <rect key="frame" x="101.5" y="0.0" width="50.5" height="50.5"/>
                                                 <state key="normal" title="9">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="I4V-qF-Dsz"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZT-eO-Ra9">
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZT-eO-Ra9">
+                                                <rect key="frame" x="152" y="0.0" width="50.5" height="50.5"/>
                                                 <state key="normal" title="A">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="fyL-Gk-nRr"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca8-9h-tCw">
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca8-9h-tCw">
+                                                <rect key="frame" x="202.5" y="0.0" width="51" height="50.5"/>
                                                 <state key="normal" title="B">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="7BO-4s-9Zz"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hd0-UT-X6y">
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hd0-UT-X6y">
+                                                <rect key="frame" x="253.5" y="0.0" width="50.5" height="50.5"/>
                                                 <state key="normal" title="C">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="eWb-i1-Atf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -244,39 +302,64 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k51-on-j1E">
+                                        <rect key="frame" x="0.0" y="50.5" width="304" height="51"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaU-JG-bPg">
+                                                <rect key="frame" x="50.5" y="0.0" width="51" height="51"/>
                                                 <state key="normal" title="5">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="0Wf-Bm-CuY"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9C-bi-fFT">
+                                                <rect key="frame" x="101.5" y="0.0" width="50.5" height="51"/>
                                                 <state key="normal" title="6">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="Xit-py-h78"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTC-9T-jYk">
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTC-9T-jYk">
+                                                <rect key="frame" x="152" y="0.0" width="50.5" height="51"/>
                                                 <state key="normal" title="D">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="Gff-Fo-IgJ"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mhn-zU-qbG">
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mhn-zU-qbG">
+                                                <rect key="frame" x="202.5" y="0.0" width="51" height="51"/>
                                                 <state key="normal" title="E">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="qfa-Ly-CaN"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z18-Qg-xMf">
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z18-Qg-xMf">
+                                                <rect key="frame" x="253.5" y="0.0" width="50.5" height="51"/>
                                                 <state key="normal" title="F">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="PNK-ze-LXn"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueK-5H-H1L">
+                                                <rect key="frame" x="0.0" y="0.0" width="50.5" height="51"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ueK-5H-H1L" secondAttribute="height" multiplier="1:1" id="lCQ-fM-iQY"/>
                                                 </constraints>
                                                 <state key="normal" title="4">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAmongInputButtons:" destination="fDO-el-IvG" eventType="touchUpInside" id="Rvj-wy-skp"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -323,6 +406,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nq5-HS-vvu" customClass="ColorMakerView" customModule="ColorPicker" customModuleProvider="target">
+                                <rect key="frame" x="8" y="332" width="304" height="68"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="IjS-cN-T2o"/>
@@ -344,10 +428,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="配色" id="zDd-wn-RrM">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="nug-jQ-w7p"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="nug-jQ-w7p">
+                            <connections>
+                                <action selector="saveCurrentColor:" destination="fDO-el-IvG" id="7GY-lC-7Pj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="colorView" destination="KTl-8e-mWf" id="MO4-bo-EfN"/>
+                        <outlet property="colorIndicationView" destination="KTl-8e-mWf" id="lGj-05-phG"/>
+                        <outlet property="colorMakerView" destination="nq5-HS-vvu" id="hht-W7-f5x"/>
+                        <outlet property="inputButtonsContainerView" destination="zDE-tI-EdN" id="fHR-ds-ZBX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2A-RI-BYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -365,15 +455,97 @@
                     <view key="view" contentMode="scaleToFill" id="Sc3-nY-DAv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z07-0m-JRj" customClass="PickColorInfomationView" customModule="ColorPicker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="480" width="320" height="88"/>
+                                <subviews>
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZA-zh-UF7">
+                                        <rect key="frame" x="8" y="8" width="72" height="72"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="jNA-UM-6p8"/>
+                                        </constraints>
+                                    </view>
+                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3d-te-wRx" customClass="CellComponentsContainerView" customModule="ColorPicker" customModuleProvider="target">
+                                        <rect key="frame" x="88" y="8" width="224" height="72"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="oZA-zh-UF7" firstAttribute="leading" secondItem="Z07-0m-JRj" secondAttribute="leading" constant="8" id="59J-x2-hR6"/>
+                                    <constraint firstItem="oZA-zh-UF7" firstAttribute="top" secondItem="Z07-0m-JRj" secondAttribute="top" constant="8" id="6b6-g6-BeY"/>
+                                    <constraint firstAttribute="height" constant="88" id="8Ai-q8-8D5"/>
+                                    <constraint firstAttribute="bottom" secondItem="oZA-zh-UF7" secondAttribute="bottom" constant="8" id="DA9-bf-T3v"/>
+                                    <constraint firstAttribute="trailing" secondItem="f3d-te-wRx" secondAttribute="trailing" constant="8" id="XT0-9g-43c"/>
+                                    <constraint firstItem="f3d-te-wRx" firstAttribute="leading" secondItem="oZA-zh-UF7" secondAttribute="trailing" constant="8" id="lxz-pt-0WR"/>
+                                    <constraint firstAttribute="bottom" secondItem="f3d-te-wRx" secondAttribute="bottom" constant="8" id="oVe-ox-adh"/>
+                                    <constraint firstItem="f3d-te-wRx" firstAttribute="top" secondItem="Z07-0m-JRj" secondAttribute="top" constant="8" id="txA-Dz-ndY"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gkK-Lf-rRy">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j2K-np-1nz">
+                                        <rect key="frame" x="33" y="117" width="255" height="183"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="j2K-np-1nz" firstAttribute="leading" secondItem="gkK-Lf-rRy" secondAttribute="leading" id="55I-h6-atV"/>
+                                    <constraint firstAttribute="trailing" secondItem="j2K-np-1nz" secondAttribute="trailing" id="TRA-e9-Z9w"/>
+                                    <constraint firstItem="j2K-np-1nz" firstAttribute="top" secondItem="gkK-Lf-rRy" secondAttribute="top" id="Y08-pk-Lrc"/>
+                                    <constraint firstAttribute="bottom" secondItem="j2K-np-1nz" secondAttribute="bottom" id="y9z-Zj-Yxc"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="q2c-hE-6aG" id="ZIH-vc-1I0"/>
+                                    <outletCollection property="gestureRecognizers" destination="zGO-HW-ryg" appends="YES" id="1bI-A2-LzW"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z07-0m-JRj" secondAttribute="trailing" constant="-16" id="EQL-55-wcj"/>
+                            <constraint firstItem="Z07-0m-JRj" firstAttribute="leading" secondItem="Sc3-nY-DAv" secondAttribute="leadingMargin" constant="-16" id="IJW-zy-kQf"/>
+                            <constraint firstAttribute="trailing" secondItem="gkK-Lf-rRy" secondAttribute="trailing" id="KTB-dS-OvF"/>
+                            <constraint firstItem="L5V-aq-Ivm" firstAttribute="top" secondItem="Z07-0m-JRj" secondAttribute="bottom" id="Osi-xO-C6u"/>
+                            <constraint firstItem="gkK-Lf-rRy" firstAttribute="top" secondItem="NhZ-WW-hjv" secondAttribute="bottom" id="QZg-DW-vlb"/>
+                            <constraint firstItem="gkK-Lf-rRy" firstAttribute="leading" secondItem="Sc3-nY-DAv" secondAttribute="leading" id="WZf-xT-26h"/>
+                            <constraint firstItem="Z07-0m-JRj" firstAttribute="top" secondItem="gkK-Lf-rRy" secondAttribute="bottom" id="aaA-Hp-hiZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="取色" id="MGE-nT-LEK">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="vs1-er-dF1"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Save" id="vs1-er-dF1">
+                                <connections>
+                                    <action selector="saveCurrentColor:" destination="q2c-hE-6aG" id="9ak-KF-u5n"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="d7I-40-OPU">
+                                <connections>
+                                    <action selector="selectImageFromPhotoLibrary:" destination="q2c-hE-6aG" id="qSb-ft-eWv"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="colorInformationView" destination="Z07-0m-JRj" id="x7c-yj-if8"/>
+                        <outlet property="imageContainerScrollView" destination="gkK-Lf-rRy" id="IuU-x3-K8Y"/>
+                        <outlet property="imageViewBottomConstraint" destination="y9z-Zj-Yxc" id="5E0-DD-3hn"/>
+                        <outlet property="imageViewLeadingConstraint" destination="55I-h6-atV" id="SJG-Nz-fbk"/>
+                        <outlet property="imageViewTopConstraint" destination="Y08-pk-Lrc" id="Uvx-Oj-p4N"/>
+                        <outlet property="imageViewTrailingConstraint" destination="TRA-e9-Z9w" id="fYM-rI-hnE"/>
+                        <outlet property="sourceImageView" destination="j2K-np-1nz" id="tbN-Xs-M9P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U2H-cX-ZDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="zGO-HW-ryg">
+                    <connections>
+                        <action selector="longPressToActiveAnchor:" destination="q2c-hE-6aG" id="276-fe-88w"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1961" y="445"/>
+            <point key="canvasLocation" x="1959.375" y="443.66197183098592"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nEi-z3-BxI">

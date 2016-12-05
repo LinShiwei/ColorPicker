@@ -10,28 +10,39 @@ import UIKit
 
 class AddColorViewController: UIViewController {
 
-    @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var colorIndicationView: UIView!
+    @IBOutlet weak var colorMakerView: ColorMakerView!
+    @IBOutlet weak var inputButtonsContainerView: InputButtonsContainerView!
+    
+    private let colorCollectionSourceManager = ColorCollectionSourceManager.sharedManager
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        colorIndicationView.layer.borderWidth = 1
+        colorIndicationView.layer.borderColor = UIColor.black.cgColor
 
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func tapAmongInputButtons(_ sender: UIButton) {
+        guard let text = sender.currentTitle else {return}
+        switch text {
+        case "1","2","3","4","5","6","7","8","9","0","A","B","C","D","E","F":
+            colorMakerView.inputOneNumber(numberString: text)
+            colorIndicationView.backgroundColor = colorMakerView.getCurrentColor()
+        case "Clear":
+            colorMakerView.clearAllTextFields()
+        case "Tab":
+            colorMakerView.tabToFocusOnNextTextField()
+        default:
+            fatalError()
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveCurrentColor(_ sender: UIBarButtonItem) {
+        
+        colorCollectionSourceManager.saveOneCollectedColor(color: CollectedColor(date: Date(), color: colorMakerView.getCurrentColor())){success in
+            if !success {
+                print("fail to save color")
+            }
+        }
     }
-    */
-
 }

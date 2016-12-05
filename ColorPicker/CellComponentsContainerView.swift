@@ -61,6 +61,9 @@ class CellComponentsContainerView: UIView {
         var a : CGFloat = 0
         color.getRed(&r, green: &g, blue: &b, alpha: &a)
         assert(a != 0)
+//        guard componentBorVView != nil && componentGorSView != nil && componentRorHView != nil else {
+//            return
+//        }
         componentRorHView?.name = "R"
         componentGorSView?.name = "G"
         componentBorVView?.name = "B"

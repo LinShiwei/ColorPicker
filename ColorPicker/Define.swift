@@ -9,8 +9,11 @@
 import Foundation
 import UIKit
 
-var colorStyle = ColorComponentsStyle.rgb
+internal var colorStyle = ColorComponentsStyle.rgb
 
+internal let windowBounds = UIScreen.main.bounds
+
+internal let textFieldFocusedBackgroundColor = UIColor.yellow
 
 enum ColorComponentsStyle {
     case rgb,hsv

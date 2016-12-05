@@ -21,7 +21,7 @@ internal final class ColorCollectionSourceManager{
     internal func getAllCollectedColor(_ completion: @escaping (Bool,[CollectedColor]?)->Void){
         var colors = [CollectedColor]()
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Color")
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
         do {
             objects = try getManagedContext().fetch(fetchRequest)
         } catch let error as NSError {
@@ -34,8 +34,9 @@ internal final class ColorCollectionSourceManager{
                 }
             }
         }else{
-            colors = mockColorCollectionData()
-            saveMockCollectedColors(colors: colors)
+            //当要使用模拟数据的时候，解除下两行注释
+//            colors = mockColorCollectionData()
+//            saveMockCollectedColors(colors: colors)
         }
         completion(true,colors)
     

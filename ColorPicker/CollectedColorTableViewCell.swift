@@ -10,20 +10,20 @@ import UIKit
 
 class CollectedColorTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var colorIndicationView: UIView!
     
     @IBOutlet weak var componentsContainer: CellComponentsContainerView!
     
     internal var color = UIColor.white{
         didSet{
             componentsContainer.color = color
-            colorView.layer.backgroundColor = color.cgColor
+            colorIndicationView.layer.backgroundColor = color.cgColor
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        colorView.layer.cornerRadius = 10
+        colorIndicationView.layer.cornerRadius = 10
     }
 
     internal func updateColorValue(){

@@ -18,7 +18,11 @@ class ColorCollectionViewController: UIViewController {
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         colorCollectionSourceManager.getAllCollectedColor{[unowned self](success,colors) in
             if(success&&(colors != nil)){
                 self.collectedColors = colors!
@@ -28,6 +32,7 @@ class ColorCollectionViewController: UIViewController {
             }
         }
     }
+    
     //MARK: IBAction
     @IBAction func tapToChangeColorStyle(_ sender: UIBarButtonItem) {
         if sender.title == "RGB" {
