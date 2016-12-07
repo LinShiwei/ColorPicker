@@ -84,6 +84,11 @@ class PickColorViewController: UIViewController {
         colorCollectionSourceManager.saveOneCollectedColor(color: CollectedColor(date: Date(), color: colorInformationView.currentColor)){success in
             if !success {
                 print("fail to save color")
+            }else{
+                let alert = UIAlertController(title: "保存颜色", message: "保存成功", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(okAction)
+                self.present(alert,animated: true,completion: nil)
             }
         }
     }

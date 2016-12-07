@@ -30,11 +30,6 @@ class InputButtonsContainerView: UIView {
                 if btn.tag > 9 && btn.tag < 16 {
                     hexButtons.append(btn as! UIButton)
                 }
-//                if let title = (btn as! UIButton).currentTitle{
-//                    if title == "A"||title == "B"||title == "C"||title == "D"||title == "E"||title == "F" {
-//                        hexButtons.append(btn as! UIButton)
-//                    }
-//                }
             }
         }
         defer{
