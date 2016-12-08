@@ -90,7 +90,8 @@ internal final class ColorCollectionSourceManager{
     //MARK: Private help func
     private func getManagedContext()->NSManagedObjectContext{
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.persistentContainer.viewContext
+//        return appDelegate.persistentContainer.viewContext
+        return appDelegate.managedObjectContext
     }
     
     private func mockColorCollectionData()->[CollectedColor]{
