@@ -35,5 +35,9 @@ class PickColorInfomationView: UIView {
         colorIndicationView.layer.borderWidth = 1
         colorIndicationView.layer.borderColor = UIColor.black.cgColor
         colorIndicationView.layer.cornerRadius = 10
+        
+        for constraint in constraints where constraint.identifier == "PickColorInformationViewHeight" {
+            constraint.constant = SizeAdaptation.sharedAdaptation.pickerInformationViewHeight
+        }
     }
 }

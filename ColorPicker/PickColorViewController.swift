@@ -28,8 +28,8 @@ class PickColorViewController: UIViewController {
         super.viewDidLoad()
 
         sourceImageView.image = UIImage(named: "PickColorImage")
-        
-        colorAnchorView = ColorAnchorView(center: CGPoint(x: windowBounds.width/2, y: windowBounds.height/2), size: CGSize(width: 40, height: 40), targetView: view)
+        colorAnchorView = ColorAnchorView(center: CGPoint(x: windowBounds.width/2, y: windowBounds.height/2), size: SizeAdaptation.sharedAdaptation.colorAnchorViewSize, targetView: view)
+       
         self.view.addSubview(colorAnchorView)
     }
 

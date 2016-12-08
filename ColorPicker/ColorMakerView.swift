@@ -45,11 +45,13 @@ class ColorMakerView: UIView {
         }
         if hexMakerView == nil {
             if let viewFromNib = Bundle.main.loadNibNamed("HEXColorMakerView", owner: self, options: nil)?.first as? HEXColorMakerView {
-                viewFromNib.frame = CGRect(x: 0, y: 38, width: frame.width, height: 30)
+                viewFromNib.frame = CGRect(x: 0, y: 30+8, width: frame.width, height: 30)
                 hexMakerView = viewFromNib
                 self.addSubview(hexMakerView!)
             }
         }
+        self.frame.size = CGSize(width: self.frame.width, height: 30*2+8)
+        self.layoutIfNeeded()
     }
     
     internal func tabToFocusOnNextTextField(){

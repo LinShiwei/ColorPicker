@@ -70,6 +70,7 @@ class RGBHSVMakerView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         titleButton.setTitle(colorStyle == .rgb ? "RGB" : "HSV", for: .normal)
+        titleButton.titleLabel?.adjustsFontSizeToFitWidth = true
         titleButton.layer.borderColor = UIColor.black.cgColor
         titleButton.layer.borderWidth = 1
         titleButton.layer.cornerRadius = 5

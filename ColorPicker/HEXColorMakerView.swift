@@ -70,6 +70,7 @@ class HEXColorMakerView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         titleButton.layer.borderColor = UIColor.lightGray.cgColor
+        titleButton.titleLabel?.adjustsFontSizeToFitWidth = true
         titleButton.layer.borderWidth = 1
         titleButton.layer.cornerRadius = 5
         

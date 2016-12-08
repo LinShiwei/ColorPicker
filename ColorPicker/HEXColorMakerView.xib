@@ -22,20 +22,20 @@
                         <action selector="tapTitleButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="tuf-xk-GRs"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ham-IA-dLj" customClass="MakerTextField" customModule="ColorPicker" customModuleProvider="target">
-                    <rect key="frame" x="116" y="0.0" width="96" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ham-IA-dLj" customClass="MakerTextField" customModule="ColorPicker" customModuleProvider="target">
+                    <rect key="frame" x="116" y="0.0" width="95.5" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a1P-ba-kGW" customClass="MakerTextField" customModule="ColorPicker" customModuleProvider="target">
-                    <rect key="frame" x="222" y="0.0" width="95" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a1P-ba-kGW" customClass="MakerTextField" customModule="ColorPicker" customModuleProvider="target">
+                    <rect key="frame" x="221.5" y="0.0" width="96" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a31-WO-gib" customClass="MakerTextField" customModule="ColorPicker" customModuleProvider="target">
-                    <rect key="frame" x="327" y="0.0" width="96" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a31-WO-gib" customClass="MakerTextField" customModule="ColorPicker" customModuleProvider="target">
+                    <rect key="frame" x="327.5" y="0.0" width="95.5" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>

@@ -50,7 +50,7 @@ class ColorCollectionViewController: UIViewController {
 
 extension ColorCollectionViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 88
+        return SizeAdaptation.sharedAdaptation.tableViewCellHeight
     }
     
     @objc(tableView:canFocusRowAtIndexPath:) func tableView(_ tableView: UITableView, canFocusRowAt indexPath: IndexPath) -> Bool {
@@ -67,6 +67,15 @@ extension ColorCollectionViewController: UITableViewDelegate{
             collectedColors.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let pasteBoard = UIPasteboard.general
+        pasteBoard.string = (tableView.cellForRow(at: indexPath) as! CollectedColorTableViewCell).colorInformation
+        let alert = UIAlertController(title: "拷贝到剪贴板", message: pasteBoard.string, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert,animated: true,completion: nil)
     }
     
 }

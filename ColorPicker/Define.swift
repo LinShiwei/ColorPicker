@@ -15,11 +15,13 @@ internal let windowBounds = UIScreen.main.bounds
 
 internal let textFieldFocusedBackgroundColor = UIColor.yellow
 
-enum ColorComponentsStyle {
+internal let isIPhone = (UI_USER_INTERFACE_IDIOM() == .phone)
+
+internal enum ColorComponentsStyle {
     case rgb,hsv
 }
 
-struct CollectedColor {
+internal struct CollectedColor {
     let date : Date
     let color : UIColor
 }

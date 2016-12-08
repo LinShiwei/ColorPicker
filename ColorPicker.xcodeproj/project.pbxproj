@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56024C761DF9004E00DC8589 /* SizeAdaptation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56024C751DF9004E00DC8589 /* SizeAdaptation.swift */; };
 		5649462F1DF26C880046491F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5649462E1DF26C880046491F /* AppDelegate.swift */; };
 		564946341DF26C880046491F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564946321DF26C880046491F /* Main.storyboard */; };
 		564946371DF26C880046491F /* ColorPicker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 564946351DF26C880046491F /* ColorPicker.xcdatamodeld */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56024C751DF9004E00DC8589 /* SizeAdaptation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeAdaptation.swift; sourceTree = "<group>"; };
 		5649462B1DF26C880046491F /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5649462E1DF26C880046491F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		564946331DF26C880046491F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				5649465E1DF2B1A10046491F /* Define.swift */,
 				564946601DF2B9FE0046491F /* ColorCollectionSourceManager.swift */,
+				56024C751DF9004E00DC8589 /* SizeAdaptation.swift */,
 				56D054331DF5492200282B70 /* UIImage+getPixelColor.swift */,
 				5649464A1DF27E140046491F /* ColorColletcionVC */,
 				5649464D1DF27E860046491F /* PickColorVC */,
@@ -234,6 +237,7 @@
 				564946521DF28B670046491F /* ColorComponentView.swift in Sources */,
 				564946441DF27D900046491F /* ColorCollectionViewController.swift in Sources */,
 				567150911DF307E000D22A33 /* ColorMakerView.swift in Sources */,
+				56024C761DF9004E00DC8589 /* SizeAdaptation.swift in Sources */,
 				564946471DF27DE00046491F /* PickColorViewController.swift in Sources */,
 				5649465F1DF2B1A10046491F /* Define.swift in Sources */,
 				56B1D6341DF4589C00E6B00C /* ColorAnchorView.swift in Sources */,
@@ -376,6 +380,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.linshiwei.app.colorpicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -390,6 +395,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.linshiwei.app.colorpicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -22,13 +22,16 @@ class InputButtonsContainerView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+        //Configure buttons
         for view in subviews {
             for btn in view.subviews where btn is UIButton {
-                btn.layer.cornerRadius = 5
-                btn.layer.borderWidth = 1
-                btn.layer.borderColor = UIColor.black.cgColor
-                if btn.tag > 9 && btn.tag < 16 {
-                    hexButtons.append(btn as! UIButton)
+                let button = btn as! UIButton
+                button.layer.cornerRadius = SizeAdaptation.sharedAdaptation.inputButtonCornerRadius
+                button.layer.borderWidth = 1
+                button.layer.borderColor = UIColor.black.cgColor
+                button.titleLabel?.font = UIFont.systemFont(ofSize: SizeAdaptation.sharedAdaptation.inputButtonFontSize)
+                if button.tag > 9 && button.tag < 16 {
+                    hexButtons.append(button)
                 }
             }
         }
