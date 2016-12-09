@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		56024C761DF9004E00DC8589 /* SizeAdaptation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56024C751DF9004E00DC8589 /* SizeAdaptation.swift */; };
+		56159CB31DFA631200475DCF /* RealTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56159CB21DFA631200475DCF /* RealTimeViewController.swift */; };
+		56159CC01DFA652000475DCF /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56159CBB1DFA64E700475DCF /* GPUImage.framework */; };
+		56159CC11DFA652C00475DCF /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56159CBB1DFA64E700475DCF /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5649462F1DF26C880046491F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5649462E1DF26C880046491F /* AppDelegate.swift */; };
 		564946341DF26C880046491F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564946321DF26C880046491F /* Main.storyboard */; };
 		564946371DF26C880046491F /* ColorPicker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 564946351DF26C880046491F /* ColorPicker.xcdatamodeld */; };
@@ -34,8 +37,47 @@
 		56D054361DF560D100282B70 /* InputButtonsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D054351DF560D100282B70 /* InputButtonsContainerView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		56159CBA1DFA64E700475DCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56159CB51DFA64E700475DCF /* GPUImage-iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCD1B1251C66A262001F2BDC;
+			remoteInfo = GPUImage;
+		};
+		56159CBC1DFA64E700475DCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56159CB51DFA64E700475DCF /* GPUImage-iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCD1B12F1C66A262001F2BDC;
+			remoteInfo = GPUImageTests;
+		};
+		56159CBE1DFA651400475DCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56159CB51DFA64E700475DCF /* GPUImage-iOS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCD1B1241C66A262001F2BDC;
+			remoteInfo = GPUImage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		56159CB01DFA622D00475DCF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				56159CC11DFA652C00475DCF /* GPUImage.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		56024C751DF9004E00DC8589 /* SizeAdaptation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeAdaptation.swift; sourceTree = "<group>"; };
+		56159CB21DFA631200475DCF /* RealTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealTimeViewController.swift; sourceTree = "<group>"; };
+		56159CB51DFA64E700475DCF /* GPUImage-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "GPUImage-iOS.xcodeproj"; path = "../../../../Downloads/github/GPUImage2-master/framework/GPUImage-iOS.xcodeproj"; sourceTree = "<group>"; };
 		5649462B1DF26C880046491F /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5649462E1DF26C880046491F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		564946331DF26C880046491F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,12 +111,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56159CC01DFA652000475DCF /* GPUImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56159CB41DFA631700475DCF /* RealTimeVC */ = {
+			isa = PBXGroup;
+			children = (
+				56159CB21DFA631200475DCF /* RealTimeViewController.swift */,
+			);
+			name = RealTimeVC;
+			sourceTree = "<group>";
+		};
+		56159CB61DFA64E700475DCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56159CBB1DFA64E700475DCF /* GPUImage.framework */,
+				56159CBD1DFA64E700475DCF /* GPUImageTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		564946221DF26C870046491F = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +158,9 @@
 				564946601DF2B9FE0046491F /* ColorCollectionSourceManager.swift */,
 				56024C751DF9004E00DC8589 /* SizeAdaptation.swift */,
 				56D054331DF5492200282B70 /* UIImage+getPixelColor.swift */,
+				56159CB51DFA64E700475DCF /* GPUImage-iOS.xcodeproj */,
 				5649464A1DF27E140046491F /* ColorColletcionVC */,
+				56159CB41DFA631700475DCF /* RealTimeVC */,
 				5649464D1DF27E860046491F /* PickColorVC */,
 				564946501DF27F5A0046491F /* AddColorVC */,
 				564946451DF27DA70046491F /* Support */,
@@ -166,10 +228,12 @@
 				564946271DF26C880046491F /* Sources */,
 				564946281DF26C880046491F /* Frameworks */,
 				564946291DF26C880046491F /* Resources */,
+				56159CB01DFA622D00475DCF /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				56159CBF1DFA651400475DCF /* PBXTargetDependency */,
 			);
 			name = ColorPicker;
 			productName = ColorPicker;
@@ -204,12 +268,35 @@
 			mainGroup = 564946221DF26C870046491F;
 			productRefGroup = 5649462C1DF26C880046491F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 56159CB61DFA64E700475DCF /* Products */;
+					ProjectRef = 56159CB51DFA64E700475DCF /* GPUImage-iOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5649462A1DF26C880046491F /* ColorPicker */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		56159CBB1DFA64E700475DCF /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = 56159CBA1DFA64E700475DCF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		56159CBD1DFA64E700475DCF /* GPUImageTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GPUImageTests.xctest;
+			remoteRef = 56159CBC1DFA64E700475DCF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		564946291DF26C880046491F /* Resources */ = {
@@ -241,6 +328,7 @@
 				564946471DF27DE00046491F /* PickColorViewController.swift in Sources */,
 				5649465F1DF2B1A10046491F /* Define.swift in Sources */,
 				56B1D6341DF4589C00E6B00C /* ColorAnchorView.swift in Sources */,
+				56159CB31DFA631200475DCF /* RealTimeViewController.swift in Sources */,
 				567150951DF3088800D22A33 /* HEXColorMakerView.swift in Sources */,
 				56B3C9A91DF42C3D0096545A /* MakerTextField.swift in Sources */,
 				564946491DF27DF10046491F /* AddColorViewController.swift in Sources */,
@@ -255,6 +343,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56159CBF1DFA651400475DCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImage;
+			targetProxy = 56159CBE1DFA651400475DCF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		564946321DF26C880046491F /* Main.storyboard */ = {
