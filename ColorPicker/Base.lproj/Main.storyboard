@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Colors!-->
+        <!--ColorPicker-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ColorCollectionViewController" customModule="ColorPicker" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,7 +77,8 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wq5-Jd-QZR" secondAttribute="bottom" id="tS4-ti-15g"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Colors!" id="mC5-4U-VKU">
+                    <navigationItem key="navigationItem" title="ColorPicker" id="mC5-4U-VKU">
+                        <barButtonItem key="backBarButtonItem" title=" " id="CdY-5M-GWA"/>
                         <leftBarButtonItems>
                             <barButtonItem title="RGB" id="b74-aB-q64">
                                 <connections>
