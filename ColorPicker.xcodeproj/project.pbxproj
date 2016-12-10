@@ -31,6 +31,7 @@
 		567150971DF308B000D22A33 /* RGBHSVMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567150961DF308B000D22A33 /* RGBHSVMakerView.swift */; };
 		567150991DF308D800D22A33 /* RGBHSVMakerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 567150981DF308D800D22A33 /* RGBHSVMakerView.xib */; };
 		5671509B1DF308E800D22A33 /* HEXColorMakerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5671509A1DF308E800D22A33 /* HEXColorMakerView.xib */; };
+		56A267151DFBD8F400D2BAFF /* RenderContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A267141DFBD8F400D2BAFF /* RenderContainerView.swift */; };
 		56B1D6341DF4589C00E6B00C /* ColorAnchorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B1D6331DF4589C00E6B00C /* ColorAnchorView.swift */; };
 		56B3C9A91DF42C3D0096545A /* MakerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C9A81DF42C3D0096545A /* MakerTextField.swift */; };
 		56D054341DF5492200282B70 /* UIImage+getPixelColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D054331DF5492200282B70 /* UIImage+getPixelColor.swift */; };
@@ -100,6 +101,7 @@
 		567150961DF308B000D22A33 /* RGBHSVMakerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBHSVMakerView.swift; sourceTree = "<group>"; };
 		567150981DF308D800D22A33 /* RGBHSVMakerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGBHSVMakerView.xib; sourceTree = "<group>"; };
 		5671509A1DF308E800D22A33 /* HEXColorMakerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HEXColorMakerView.xib; sourceTree = "<group>"; };
+		56A267141DFBD8F400D2BAFF /* RenderContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderContainerView.swift; sourceTree = "<group>"; };
 		56B1D6331DF4589C00E6B00C /* ColorAnchorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorAnchorView.swift; sourceTree = "<group>"; };
 		56B3C9A81DF42C3D0096545A /* MakerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakerTextField.swift; sourceTree = "<group>"; };
 		56D054331DF5492200282B70 /* UIImage+getPixelColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+getPixelColor.swift"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				56159CB21DFA631200475DCF /* RealTimeViewController.swift */,
+				56A267141DFBD8F400D2BAFF /* RenderContainerView.swift */,
 			);
 			name = RealTimeVC;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				5649465D1DF29D280046491F /* CellComponentsContainerView.swift in Sources */,
 				564946521DF28B670046491F /* ColorComponentView.swift in Sources */,
 				564946441DF27D900046491F /* ColorCollectionViewController.swift in Sources */,
+				56A267151DFBD8F400D2BAFF /* RenderContainerView.swift in Sources */,
 				567150911DF307E000D22A33 /* ColorMakerView.swift in Sources */,
 				56024C761DF9004E00DC8589 /* SizeAdaptation.swift in Sources */,
 				564946471DF27DE00046491F /* PickColorViewController.swift in Sources */,

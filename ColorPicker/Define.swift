@@ -25,3 +25,11 @@ internal struct CollectedColor {
     let date : Date
     let color : UIColor
 }
+
+internal let sharedAlertVC : UIAlertController = {
+    let alert = UIAlertController(title: "Save", message: "Save success.", preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+    alert.addAction(okAction)
+    return alert
+}()
+

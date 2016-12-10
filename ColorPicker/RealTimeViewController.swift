@@ -8,29 +8,80 @@
 
 import UIKit
 import GPUImage
+import AVFoundation
 
 class RealTimeViewController: UIViewController {
 
+    var camera : Camera?
+    var cameraRawData : RawDataOutput?
+    
+    var cameraStop : Bool = true
+    
+    private let colorCollectionSourceManager = ColorCollectionSourceManager.sharedManager
+    
+    @IBOutlet weak var cameraControlBtn: UIBarButtonItem!
+    @IBOutlet weak var renderView: RenderView!
+    @IBOutlet weak var colorInformationView: PickColorInfomationView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidLayoutSubviews() {
+        
+        if camera == nil {
+            cameraRawData = RawDataOutput()
+            cameraRawData!.dataAvailableCallback = {data in
+                let centerPointDataStartIndex = ((data.count/4)/2+240)*4
+                
+                let r = CGFloat(data[centerPointDataStartIndex])/255.0
+                let g = CGFloat(data[centerPointDataStartIndex+1])/255.0
+                let b = CGFloat(data[centerPointDataStartIndex+2])/255.0
+                let a = CGFloat(data[centerPointDataStartIndex+3])/255.0
+                
+                let centerPointColor = UIColor(red: r, green: g, blue: b, alpha: a)
+                
+                DispatchQueue.main.async { [unowned self] in
+                    self.colorInformationView.currentColor = centerPointColor
+                }
+            }
+            do {
+                //            camera = try Camera(sessionPreset: AVCaptureSessionPresetHigh)
+                camera = try Camera(sessionPreset: AVCaptureSessionPreset640x480)
+                camera! --> renderView
+                camera! --> cameraRawData!
+                camera!.startCapture()
+                cameraStop = false
+            } catch {
+                fatalError("Could not initialize rendering pipeline: \(error)")
+            }
+        }
     }
-    */
-
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        camera?.stopCapture()
+    }
+    @IBAction func saveCurrentColor(_ sender: UIBarButtonItem) {
+        colorCollectionSourceManager.saveOneCollectedColor(color: CollectedColor(date: Date(), color: colorInformationView.currentColor)){success in
+            if !success {
+                print("fail to save color")
+            }else{
+                self.present(sharedAlertVC,animated: true,completion: nil)
+            }
+        }
+    }
+    @IBAction func pauseCapture(_ sender: UIBarButtonItem) {
+        if cameraStop {
+            camera?.startCapture()
+//            cameraControlBtn = UIBarButtonItem(barButtonSystemItem: .pause, target: self, action: #selector(pauseCapture(_:)))
+            sender.image = #imageLiteral(resourceName: "Pause Filled-22")
+        } else {
+            camera?.stopCapture()
+//            cameraControlBtn = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(pauseCapture(_:)))
+            sender.image = #imageLiteral(resourceName: "Play Filled-22")
+        }
+        cameraStop = !cameraStop
+        
+    }
 }

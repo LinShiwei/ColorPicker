@@ -85,10 +85,8 @@ class PickColorViewController: UIViewController {
             if !success {
                 print("fail to save color")
             }else{
-                let alert = UIAlertController(title: "保存颜色", message: "保存成功", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alert.addAction(okAction)
-                self.present(alert,animated: true,completion: nil)
+                
+                self.present(sharedAlertVC,animated: true,completion: nil)
             }
         }
     }
@@ -132,7 +130,6 @@ extension PickColorViewController : UIImagePickerControllerDelegate {
         updateConstraintsForSize(size: imageContainerScrollView.bounds.size)
         updateMinZoomScaleForSize(size: imageContainerScrollView.bounds.size)
         dismiss(animated: true, completion: nil)
-
     }
 
 }

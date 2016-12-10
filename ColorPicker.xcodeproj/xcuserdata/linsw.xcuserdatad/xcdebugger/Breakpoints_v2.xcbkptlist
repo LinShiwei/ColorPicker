@@ -41,13 +41,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ColorPicker/PickColorInfomationView.swift"
-            timestampString = "502874803.942107"
+            filePath = "../../../Downloads/github/GPUImage2-master/framework/Source/RawDataOutput.swift"
+            timestampString = "503031491.055488"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "init(coder:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "newFramebufferAvailable(_:fromSourceIndex:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ColorPicker/SaveAlertViewController.swift"
+            timestampString = "503067328.690909"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

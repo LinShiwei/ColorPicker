@@ -23,7 +23,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>选择相册里的照片，用于拾取颜色</string>
+	<string>Pick color from photo.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Pick color using camera.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
