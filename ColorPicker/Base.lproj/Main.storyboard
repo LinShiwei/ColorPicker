@@ -32,7 +32,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q9B-Kq-tbc" id="Uf8-4c-v9u">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmI-zt-qGc">
@@ -92,12 +92,12 @@
                             </barButtonItem>
                         </leftBarButtonItems>
                         <rightBarButtonItems>
-                            <barButtonItem title="Make" id="Ah9-I2-M3m">
+                            <barButtonItem systemItem="compose" id="Ah9-I2-M3m">
                                 <connections>
                                     <segue destination="fDO-el-IvG" kind="show" id="bQa-Ea-zaQ"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Pick" id="2qI-as-ZWD">
+                            <barButtonItem systemItem="add" id="2qI-as-ZWD">
                                 <connections>
                                     <segue destination="q2c-hE-6aG" kind="show" id="0mw-el-avy"/>
                                 </connections>
@@ -441,7 +441,7 @@
                             <constraint firstItem="nq5-HS-vvu" firstAttribute="leading" secondItem="0zU-hx-iK9" secondAttribute="leading" constant="8" id="qvV-po-oIL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Make" id="zDd-wn-RrM">
+                    <navigationItem key="navigationItem" title="Create" id="zDd-wn-RrM">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="nug-jQ-w7p">
                             <connections>
                                 <action selector="saveCurrentColor:" destination="fDO-el-IvG" id="7GY-lC-7Pj"/>
@@ -609,7 +609,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYD-uI-bgJ">
-                                        <rect key="frame" x="187" y="207" width="1" height="100"/>
+                                        <rect key="frame" x="187.5" y="207.5" width="1" height="100"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="isv-D2-ob8"/>
@@ -617,7 +617,7 @@
                                         </constraints>
                                     </view>
                                     <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtA-Fk-AYv">
-                                        <rect key="frame" x="137" y="257" width="100" height="1"/>
+                                        <rect key="frame" x="137.5" y="257.5" width="100" height="1"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="WVt-go-RJb"/>

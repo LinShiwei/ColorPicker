@@ -1,0 +1,87 @@
+
+/* Class = "UIButton"; normalTitle = "3"; ObjectID = "40f-jG-Ewc"; */
+"40f-jG-Ewc.normalTitle" = "3";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "CdY-5M-GWA"; */
+"CdY-5M-GWA.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "8"; ObjectID = "G5G-nh-rCq"; */
+"G5G-nh-rCq.normalTitle" = "8";
+
+/* Class = "UIButton"; normalTitle = "A"; ObjectID = "IZT-eO-Ra9"; */
+"IZT-eO-Ra9.normalTitle" = "A";
+
+/* Class = "UIButton"; normalTitle = "1"; ObjectID = "Ks3-9z-em0"; */
+"Ks3-9z-em0.normalTitle" = "1";
+
+/* Class = "UINavigationItem"; title = "Pick"; ObjectID = "MGE-nT-LEK"; */
+"MGE-nT-LEK.title" = "取色";
+
+/* Class = "UIButton"; normalTitle = "E"; ObjectID = "Mhn-zU-qbG"; */
+"Mhn-zU-qbG.normalTitle" = "E";
+
+/* Class = "UIButton"; normalTitle = "0"; ObjectID = "Ne7-Qz-lzd"; */
+"Ne7-Qz-lzd.normalTitle" = "0";
+
+/* Class = "UIButton"; normalTitle = "9"; ObjectID = "SzL-zr-Ro8"; */
+"SzL-zr-Ro8.normalTitle" = "9";
+
+/* Class = "UIButton"; normalTitle = "Tab"; ObjectID = "Ub6-96-7dd"; */
+"Ub6-96-7dd.normalTitle" = "Tab";
+
+/* Class = "UIButton"; normalTitle = "5"; ObjectID = "WaU-JG-bPg"; */
+"WaU-JG-bPg.normalTitle" = "5";
+
+/* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "ZCw-y7-tfL"; */
+"ZCw-y7-tfL.normalTitle" = "Clear";
+
+/* Class = "UIBarButtonItem"; title = "RGB"; ObjectID = "b74-aB-q64"; */
+"b74-aB-q64.title" = "RGB";
+
+/* Class = "UINavigationItem"; title = "Real Time"; ObjectID = "bhK-mm-vzK"; */
+"bhK-mm-vzK.title" = "实时取色";
+
+/* Class = "UIButton"; normalTitle = "B"; ObjectID = "ca8-9h-tCw"; */
+"ca8-9h-tCw.normalTitle" = "B";
+
+/* Class = "UIViewController"; title = "配色VC"; ObjectID = "fDO-el-IvG"; */
+"fDO-el-IvG.title" = "配色VC";
+
+/* Class = "UIButton"; normalTitle = "7"; ObjectID = "h50-f1-EVy"; */
+"h50-f1-EVy.normalTitle" = "7";
+
+/* Class = "UIButton"; normalTitle = "C"; ObjectID = "hd0-UT-X6y"; */
+"hd0-UT-X6y.normalTitle" = "C";
+
+/* Class = "UINavigationItem"; title = "ColorPicker"; ObjectID = "mC5-4U-VKU"; */
+"mC5-4U-VKU.title" = "ColorPicker";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "nug-jQ-w7p"; */
+"nug-jQ-w7p.title" = "保存";
+
+/* Class = "UIViewController"; title = "取色VC"; ObjectID = "q2c-hE-6aG"; */
+"q2c-hE-6aG.title" = "取色VC";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "rPl-eh-ncz"; */
+"rPl-eh-ncz.title" = "保存";
+
+/* Class = "UIButton"; normalTitle = "2"; ObjectID = "tGO-BJ-0H8"; */
+"tGO-BJ-0H8.normalTitle" = "2";
+
+/* Class = "UIButton"; normalTitle = "4"; ObjectID = "ueK-5H-H1L"; */
+"ueK-5H-H1L.normalTitle" = "4";
+
+/* Class = "UIButton"; normalTitle = "6"; ObjectID = "v9C-bi-fFT"; */
+"v9C-bi-fFT.normalTitle" = "6";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "vs1-er-dF1"; */
+"vs1-er-dF1.title" = "保存";
+
+/* Class = "UIButton"; normalTitle = "D"; ObjectID = "xTC-9T-jYk"; */
+"xTC-9T-jYk.normalTitle" = "D";
+
+/* Class = "UIButton"; normalTitle = "F"; ObjectID = "z18-Qg-xMf"; */
+"z18-Qg-xMf.normalTitle" = "F";
+
+/* Class = "UINavigationItem"; title = "Create"; ObjectID = "zDd-wn-RrM"; */
+"zDd-wn-RrM.title" = "配色";

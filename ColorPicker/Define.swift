@@ -27,9 +27,17 @@ internal struct CollectedColor {
 }
 
 internal let sharedAlertVC : UIAlertController = {
-    let alert = UIAlertController(title: "Save", message: "Save success.", preferredStyle: .alert)
-    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-    alert.addAction(okAction)
-    return alert
+    
+    if let languageID = Bundle.main.preferredLocalizations.first,languageID.contains("zh-Hans"){
+        let alert = UIAlertController(title: "保存", message: "保存成功", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "好", style: .default, handler: nil)
+        alert.addAction(okAction)
+        return alert
+    }else{
+        let alert = UIAlertController(title: "Save", message: "Save success.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        return alert
+    }
 }()
 
