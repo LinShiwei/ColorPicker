@@ -11,6 +11,7 @@
 		56159CB31DFA631200475DCF /* RealTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56159CB21DFA631200475DCF /* RealTimeViewController.swift */; };
 		56159CC01DFA652000475DCF /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56159CBB1DFA64E700475DCF /* GPUImage.framework */; };
 		56159CC11DFA652C00475DCF /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56159CBB1DFA64E700475DCF /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		563E51421DFE8209001002F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 563E51441DFE8209001002F9 /* InfoPlist.strings */; };
 		5649462F1DF26C880046491F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5649462E1DF26C880046491F /* AppDelegate.swift */; };
 		564946341DF26C880046491F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564946321DF26C880046491F /* Main.storyboard */; };
 		564946371DF26C880046491F /* ColorPicker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 564946351DF26C880046491F /* ColorPicker.xcdatamodeld */; };
@@ -81,6 +82,7 @@
 		56159CB51DFA64E700475DCF /* GPUImage-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "GPUImage-iOS.xcodeproj"; path = "../../../../Downloads/github/GPUImage2-master/framework/GPUImage-iOS.xcodeproj"; sourceTree = "<group>"; };
 		563E51381DFE7DC8001002F9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		563E51391DFE7DC8001002F9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		563E51431DFE8209001002F9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		5649462B1DF26C880046491F /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5649462E1DF26C880046491F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		564946331DF26C880046491F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				564946351DF26C880046491F /* ColorPicker.xcdatamodeld */,
 				5649463A1DF26C880046491F /* LaunchScreen.storyboard */,
 				5649463D1DF26C880046491F /* Info.plist */,
+				563E51441DFE8209001002F9 /* InfoPlist.strings */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				5671509B1DF308E800D22A33 /* HEXColorMakerView.xib in Resources */,
 				564946541DF28B7D0046491F /* ColorComponentView.xib in Resources */,
 				5649463C1DF26C880046491F /* LaunchScreen.storyboard in Resources */,
+				563E51421DFE8209001002F9 /* InfoPlist.strings in Resources */,
 				567150991DF308D800D22A33 /* RGBHSVMakerView.xib in Resources */,
 				564946391DF26C880046491F /* Assets.xcassets in Resources */,
 				564946341DF26C880046491F /* Main.storyboard in Resources */,
@@ -359,6 +363,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		563E51441DFE8209001002F9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				563E51431DFE8209001002F9 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		564946321DF26C880046491F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

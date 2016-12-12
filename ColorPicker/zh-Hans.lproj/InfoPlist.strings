@@ -1,0 +1,11 @@
+/* 
+  infoPlist.strings
+  ColorPicker
+
+  Created by Linsw on 16/12/12.
+  Copyright © 2016年 Linsw. All rights reserved.
+*/
+
+NSCameraUsageDescription="使用摄像头实时获取颜色。";
+
+NSPhotoLibraryUsageDescription="从相册中的照片获取颜色。";
