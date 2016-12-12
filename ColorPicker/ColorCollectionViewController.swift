@@ -102,7 +102,6 @@ extension ColorCollectionViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CollectedColorTableViewCell", for: indexPath) as! CollectedColorTableViewCell
         cell.color = collectedColors[indexPath.row].color
-        cell.updateColorValue()
         return cell
     }
 

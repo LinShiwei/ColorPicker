@@ -32,34 +32,48 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q9B-Kq-tbc" id="Uf8-4c-v9u">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmI-zt-qGc">
-                                                    <rect key="frame" x="16" y="8" width="71" height="71"/>
+                                                <view tag="-1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fK-Lx-89r" customClass="ColorInformationView" customModule="ColorPicker" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
+                                                    <subviews>
+                                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmI-zt-qGc">
+                                                            <rect key="frame" x="8" y="8" width="71.5" height="71.5"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="pmI-zt-qGc" secondAttribute="height" multiplier="1:1" id="pER-m8-HXP"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1eA-HX-20e" customClass="ColorComponentsContainerView" customModule="ColorPicker" customModuleProvider="target">
+                                                            <rect key="frame" x="87.5" y="8" width="279.5" height="71.5"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="ViewInCell">
+                                                        <bool key="isElement" value="NO"/>
+                                                    </accessibility>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="pmI-zt-qGc" secondAttribute="height" multiplier="1:1" id="Flj-hS-OZP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="1eA-HX-20e" secondAttribute="bottom" constant="8" id="453-6t-R3E"/>
+                                                        <constraint firstItem="1eA-HX-20e" firstAttribute="leading" secondItem="pmI-zt-qGc" secondAttribute="trailing" constant="8" id="XCQ-42-oxV"/>
+                                                        <constraint firstAttribute="bottom" secondItem="pmI-zt-qGc" secondAttribute="bottom" constant="8" id="YZu-eI-K9u"/>
+                                                        <constraint firstItem="1eA-HX-20e" firstAttribute="top" secondItem="4fK-Lx-89r" secondAttribute="top" constant="8" id="Z4J-mi-Dba"/>
+                                                        <constraint firstItem="pmI-zt-qGc" firstAttribute="leading" secondItem="4fK-Lx-89r" secondAttribute="leading" constant="8" id="aE5-GJ-EAd"/>
+                                                        <constraint firstItem="pmI-zt-qGc" firstAttribute="top" secondItem="4fK-Lx-89r" secondAttribute="top" constant="8" id="flO-Qp-Z8K"/>
+                                                        <constraint firstAttribute="trailing" secondItem="1eA-HX-20e" secondAttribute="trailing" constant="8" id="srm-FE-9aT"/>
                                                     </constraints>
-                                                </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1eA-HX-20e" customClass="ColorComponentsContainerView" customModule="ColorPicker" customModuleProvider="target">
-                                                    <rect key="frame" x="95" y="8" width="264" height="71"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="1eA-HX-20e" firstAttribute="top" secondItem="Uf8-4c-v9u" secondAttribute="topMargin" id="7pt-ZW-d4J"/>
-                                                <constraint firstItem="pmI-zt-qGc" firstAttribute="top" secondItem="Uf8-4c-v9u" secondAttribute="topMargin" id="KdS-OG-0rQ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="pmI-zt-qGc" secondAttribute="bottom" id="Ozo-Od-hQI"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="1eA-HX-20e" secondAttribute="bottom" id="lDU-xY-XIF"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="1eA-HX-20e" secondAttribute="trailing" constant="8" id="ptW-CJ-uGE"/>
-                                                <constraint firstItem="pmI-zt-qGc" firstAttribute="leading" secondItem="Uf8-4c-v9u" secondAttribute="leadingMargin" constant="8" id="rar-mg-ab9"/>
-                                                <constraint firstItem="1eA-HX-20e" firstAttribute="leading" secondItem="pmI-zt-qGc" secondAttribute="trailing" constant="8" id="vz4-nY-zye"/>
+                                                <constraint firstItem="4fK-Lx-89r" firstAttribute="leading" secondItem="Uf8-4c-v9u" secondAttribute="leading" id="Med-3b-PSM"/>
+                                                <constraint firstAttribute="bottom" secondItem="4fK-Lx-89r" secondAttribute="bottom" id="SUb-7y-FRj"/>
+                                                <constraint firstAttribute="trailing" secondItem="4fK-Lx-89r" secondAttribute="trailing" id="cJq-NV-O1k"/>
+                                                <constraint firstItem="4fK-Lx-89r" firstAttribute="top" secondItem="Uf8-4c-v9u" secondAttribute="top" id="oYr-fD-pEi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="colorIndicationView" destination="pmI-zt-qGc" id="zdj-Rn-y3K"/>
-                                            <outlet property="componentsContainer" destination="1eA-HX-20e" id="b4u-0y-eTp"/>
+                                            <outlet property="colorInformationView" destination="4fK-Lx-89r" id="w64-vR-58J"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -110,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="937.5" y="791.19718309859161"/>
+            <point key="canvasLocation" x="936.79999999999995" y="791.15442278860576"/>
         </scene>
         <!--配色VC-->
         <scene sceneID="iC0-At-Anv">

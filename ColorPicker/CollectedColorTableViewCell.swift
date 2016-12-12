@@ -10,14 +10,11 @@ import UIKit
 
 class CollectedColorTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var colorIndicationView: UIView!
-    
-    @IBOutlet weak var componentsContainer: ColorComponentsContainerView!
+    @IBOutlet weak var colorInformationView: ColorInformationView!
     
     internal var color = UIColor.white{
         didSet{
-            componentsContainer.color = color
-            colorIndicationView.layer.backgroundColor = color.cgColor
+            colorInformationView.currentColor = color
         }
     }
     
@@ -47,10 +44,9 @@ class CollectedColorTableViewCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        colorIndicationView.layer.cornerRadius = 10
     }
 
     internal func updateColorValue(){
-        componentsContainer.updateColorValue()
+        colorInformationView.currentColor = color
     }
 }
