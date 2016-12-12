@@ -21,10 +21,10 @@
 		564946471DF27DE00046491F /* PickColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564946461DF27DE00046491F /* PickColorViewController.swift */; };
 		564946491DF27DF10046491F /* AddColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564946481DF27DF10046491F /* AddColorViewController.swift */; };
 		5649464C1DF27E710046491F /* CollectedColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5649464B1DF27E710046491F /* CollectedColorTableViewCell.swift */; };
-		5649464F1DF27F160046491F /* PickColorInfomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5649464E1DF27F160046491F /* PickColorInfomationView.swift */; };
+		5649464F1DF27F160046491F /* ColorInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5649464E1DF27F160046491F /* ColorInformationView.swift */; };
 		564946521DF28B670046491F /* ColorComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564946511DF28B670046491F /* ColorComponentView.swift */; };
 		564946541DF28B7D0046491F /* ColorComponentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564946531DF28B7D0046491F /* ColorComponentView.xib */; };
-		5649465D1DF29D280046491F /* CellComponentsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5649465C1DF29D280046491F /* CellComponentsContainerView.swift */; };
+		5649465D1DF29D280046491F /* ColorComponentsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5649465C1DF29D280046491F /* ColorComponentsContainerView.swift */; };
 		5649465F1DF2B1A10046491F /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5649465E1DF2B1A10046491F /* Define.swift */; };
 		564946611DF2B9FE0046491F /* ColorCollectionSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564946601DF2B9FE0046491F /* ColorCollectionSourceManager.swift */; };
 		567150911DF307E000D22A33 /* ColorMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567150901DF307E000D22A33 /* ColorMakerView.swift */; };
@@ -94,10 +94,10 @@
 		564946461DF27DE00046491F /* PickColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickColorViewController.swift; sourceTree = "<group>"; };
 		564946481DF27DF10046491F /* AddColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddColorViewController.swift; sourceTree = "<group>"; };
 		5649464B1DF27E710046491F /* CollectedColorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectedColorTableViewCell.swift; sourceTree = "<group>"; };
-		5649464E1DF27F160046491F /* PickColorInfomationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickColorInfomationView.swift; sourceTree = "<group>"; };
+		5649464E1DF27F160046491F /* ColorInformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorInformationView.swift; sourceTree = "<group>"; };
 		564946511DF28B670046491F /* ColorComponentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorComponentView.swift; sourceTree = "<group>"; };
 		564946531DF28B7D0046491F /* ColorComponentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorComponentView.xib; sourceTree = "<group>"; };
-		5649465C1DF29D280046491F /* CellComponentsContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellComponentsContainerView.swift; sourceTree = "<group>"; };
+		5649465C1DF29D280046491F /* ColorComponentsContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorComponentsContainerView.swift; sourceTree = "<group>"; };
 		5649465E1DF2B1A10046491F /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		564946601DF2B9FE0046491F /* ColorCollectionSourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCollectionSourceManager.swift; sourceTree = "<group>"; };
 		567150901DF307E000D22A33 /* ColorMakerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMakerView.swift; sourceTree = "<group>"; };
@@ -165,6 +165,7 @@
 				564946601DF2B9FE0046491F /* ColorCollectionSourceManager.swift */,
 				56024C751DF9004E00DC8589 /* SizeAdaptation.swift */,
 				56D054331DF5492200282B70 /* UIImage+getPixelColor.swift */,
+				5649464E1DF27F160046491F /* ColorInformationView.swift */,
 				56159CB51DFA64E700475DCF /* GPUImage-iOS.xcodeproj */,
 				5649464A1DF27E140046491F /* ColorColletcionVC */,
 				56159CB41DFA631700475DCF /* RealTimeVC */,
@@ -194,7 +195,7 @@
 			children = (
 				564946431DF27D900046491F /* ColorCollectionViewController.swift */,
 				5649464B1DF27E710046491F /* CollectedColorTableViewCell.swift */,
-				5649465C1DF29D280046491F /* CellComponentsContainerView.swift */,
+				5649465C1DF29D280046491F /* ColorComponentsContainerView.swift */,
 				564946511DF28B670046491F /* ColorComponentView.swift */,
 				564946531DF28B7D0046491F /* ColorComponentView.xib */,
 			);
@@ -205,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				564946461DF27DE00046491F /* PickColorViewController.swift */,
-				5649464E1DF27F160046491F /* PickColorInfomationView.swift */,
 				56B1D6331DF4589C00E6B00C /* ColorAnchorView.swift */,
 			);
 			name = PickColorVC;
@@ -329,7 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				564946611DF2B9FE0046491F /* ColorCollectionSourceManager.swift in Sources */,
-				5649465D1DF29D280046491F /* CellComponentsContainerView.swift in Sources */,
+				5649465D1DF29D280046491F /* ColorComponentsContainerView.swift in Sources */,
 				564946521DF28B670046491F /* ColorComponentView.swift in Sources */,
 				564946441DF27D900046491F /* ColorCollectionViewController.swift in Sources */,
 				56A267151DFBD8F400D2BAFF /* RenderContainerView.swift in Sources */,
@@ -343,7 +343,7 @@
 				56B3C9A91DF42C3D0096545A /* MakerTextField.swift in Sources */,
 				564946491DF27DF10046491F /* AddColorViewController.swift in Sources */,
 				5649464C1DF27E710046491F /* CollectedColorTableViewCell.swift in Sources */,
-				5649464F1DF27F160046491F /* PickColorInfomationView.swift in Sources */,
+				5649464F1DF27F160046491F /* ColorInformationView.swift in Sources */,
 				567150971DF308B000D22A33 /* RGBHSVMakerView.swift in Sources */,
 				56D054361DF560D100282B70 /* InputButtonsContainerView.swift in Sources */,
 				564946371DF26C880046491F /* ColorPicker.xcdatamodeld in Sources */,

@@ -1,5 +1,5 @@
 //
-//  PickColorInfomationView.swift
+//  ColorInformationView.swift
 //  ColorPicker
 //
 //  Created by Linsw on 16/12/3.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PickColorInfomationView: UIView {
+class ColorInformationView: UIView {
 
     internal var currentColor = UIColor.white {
         didSet{
@@ -18,13 +18,13 @@ class PickColorInfomationView: UIView {
         }
     }
     
-    private var colorComponentsContainerView : CellComponentsContainerView!
+    private var colorComponentsContainerView : ColorComponentsContainerView!
     private var colorIndicationView : UIView!
     
     required init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)
-        colorComponentsContainerView = viewWithTag(2) as! CellComponentsContainerView
+        colorComponentsContainerView = viewWithTag(2) as! ColorComponentsContainerView
         colorComponentsContainerView.layer.cornerRadius = 10
         colorComponentsContainerView.layer.borderColor = UIColor.black.cgColor
         colorComponentsContainerView.layer.borderWidth = 1
@@ -36,7 +36,7 @@ class PickColorInfomationView: UIView {
         colorIndicationView.layer.borderColor = UIColor.black.cgColor
         colorIndicationView.layer.cornerRadius = 10
         
-        for constraint in constraints where constraint.identifier == "PickColorInformationViewHeight" {
+        for constraint in constraints where constraint.identifier == "ColorInformationViewHeight" {
             constraint.constant = SizeAdaptation.sharedAdaptation.pickerInformationViewHeight
         }
     }

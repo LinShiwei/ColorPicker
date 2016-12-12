@@ -42,7 +42,7 @@
                                                         <constraint firstAttribute="width" secondItem="pmI-zt-qGc" secondAttribute="height" multiplier="1:1" id="Flj-hS-OZP"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1eA-HX-20e" customClass="CellComponentsContainerView" customModule="ColorPicker" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1eA-HX-20e" customClass="ColorComponentsContainerView" customModule="ColorPicker" customModuleProvider="target">
                                                     <rect key="frame" x="95" y="8" width="264" height="71"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
@@ -470,7 +470,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z07-0m-JRj" customClass="PickColorInfomationView" customModule="ColorPicker" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z07-0m-JRj" customClass="ColorInformationView" customModule="ColorPicker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="579" width="375" height="88"/>
                                 <subviews>
                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZA-zh-UF7">
@@ -480,7 +480,7 @@
                                             <constraint firstAttribute="width" secondItem="oZA-zh-UF7" secondAttribute="height" multiplier="1:1" id="AfY-tv-Y2K"/>
                                         </constraints>
                                     </view>
-                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3d-te-wRx" customClass="CellComponentsContainerView" customModule="ColorPicker" customModuleProvider="target">
+                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3d-te-wRx" customClass="ColorComponentsContainerView" customModule="ColorPicker" customModuleProvider="target">
                                         <rect key="frame" x="88" y="8" width="279" height="72"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -573,10 +573,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Emg-IC-sw6" customClass="PickColorInfomationView" customModule="ColorPicker" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Emg-IC-sw6" customClass="ColorInformationView" customModule="ColorPicker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="579" width="375" height="88"/>
                                 <subviews>
-                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2Y-j9-8zW" customClass="CellComponentsContainerView" customModule="ColorPicker" customModuleProvider="target">
+                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2Y-j9-8zW" customClass="ColorComponentsContainerView" customModule="ColorPicker" customModuleProvider="target">
                                         <rect key="frame" x="88" y="8" width="279" height="72"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>

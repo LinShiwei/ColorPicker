@@ -17,8 +17,6 @@ class ColorAnchorView: UIView {
     
     internal var targetView = UIView()
     
-    internal var currentFocusColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
-    
     internal init(center: CGPoint, size :CGSize, targetView :UIView){
         let frame = CGRect(x: center.x-size.width/2, y: center.y-size.height/2, width: size.width, height: size.height)
         super.init(frame: frame)
@@ -66,7 +64,7 @@ class ColorAnchorView: UIView {
         magnifierView.layer.cornerRadius = magnifierView.frame.width/2
         magnifierView.layer.masksToBounds = true
         
-        let gap : CGFloat                                                                                                                                                                                                                                                   = 5.0
+        let gap : CGFloat = 5.0
         magnifyingImageView.frame = CGRect(x: -gap, y: -gap, width: magnifierView.frame.width+gap*2, height: magnifierView.frame.height+gap*2)
         magnifyingImageView.contentMode = UIViewContentMode.scaleToFill
         magnifyingImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]

@@ -72,8 +72,18 @@ extension ColorCollectionViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pasteBoard = UIPasteboard.general
         pasteBoard.string = (tableView.cellForRow(at: indexPath) as! CollectedColorTableViewCell).colorInformation
-        let alert = UIAlertController(title: "拷贝到剪贴板", message: pasteBoard.string, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        var alertTitle = ""
+        var okTitle = ""
+        if isLanguageChineseSimple {
+            alertTitle = "拷贝到剪贴板。"
+            okTitle = "好"
+        }else{
+            alertTitle = "Copy to pasteboard."
+            okTitle = "OK"
+        }
+        let alert = UIAlertController(title: alertTitle, message: pasteBoard.string, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: okTitle, style: .default, handler: nil)
         alert.addAction(okAction)
         self.present(alert,animated: true,completion: nil)
     }

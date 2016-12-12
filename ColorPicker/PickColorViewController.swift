@@ -13,7 +13,7 @@ class PickColorViewController: UIViewController {
     @IBOutlet weak var imageContainerScrollView: UIScrollView!
     @IBOutlet weak var sourceImageView: UIImageView!
     
-    @IBOutlet weak var colorInformationView: PickColorInfomationView!
+    @IBOutlet weak var colorInformationView: ColorInformationView!
     
     
     @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!

@@ -21,7 +21,7 @@ class RealTimeViewController: UIViewController {
     
     @IBOutlet weak var cameraControlBtn: UIBarButtonItem!
     @IBOutlet weak var renderView: RenderView!
-    @IBOutlet weak var colorInformationView: PickColorInfomationView!
+    @IBOutlet weak var colorInformationView: ColorInformationView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

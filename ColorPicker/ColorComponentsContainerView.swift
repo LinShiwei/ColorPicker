@@ -1,5 +1,5 @@
 //
-//  CellComponentsContainerView.swift
+//  ColorComponentsContainerView.swift
 //  ColorPicker
 //
 //  Created by Linsw on 16/12/3.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CellComponentsContainerView: UIView {
+class ColorComponentsContainerView: UIView {
     
     private var componentRorHView : ColorComponentView?
     private var componentGorSView : ColorComponentView?

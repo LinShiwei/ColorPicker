@@ -17,6 +17,14 @@ internal let textFieldFocusedBackgroundColor = UIColor.yellow
 
 internal let isIPhone = (UI_USER_INTERFACE_IDIOM() == .phone)
 
+internal let isLanguageChineseSimple : Bool = {
+    if let languageID = Bundle.main.preferredLocalizations.first,languageID.contains("zh-Hans"){
+        return true
+    }else{
+        return false
+    }
+}()
+
 internal enum ColorComponentsStyle {
     case rgb,hsv
 }
@@ -27,8 +35,7 @@ internal struct CollectedColor {
 }
 
 internal let sharedAlertVC : UIAlertController = {
-    
-    if let languageID = Bundle.main.preferredLocalizations.first,languageID.contains("zh-Hans"){
+    if isLanguageChineseSimple{
         let alert = UIAlertController(title: "保存", message: "保存成功", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "好", style: .default, handler: nil)
         alert.addAction(okAction)

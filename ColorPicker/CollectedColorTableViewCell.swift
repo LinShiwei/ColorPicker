@@ -12,7 +12,7 @@ class CollectedColorTableViewCell: UITableViewCell {
 
     @IBOutlet weak var colorIndicationView: UIView!
     
-    @IBOutlet weak var componentsContainer: CellComponentsContainerView!
+    @IBOutlet weak var componentsContainer: ColorComponentsContainerView!
     
     internal var color = UIColor.white{
         didSet{
