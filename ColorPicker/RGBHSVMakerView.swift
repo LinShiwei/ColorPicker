@@ -13,6 +13,7 @@ class RGBHSVMakerView: UIView {
     @IBOutlet weak var firstTextField: MakerTextField!
     @IBOutlet weak var secondTextField: MakerTextField!
     @IBOutlet weak var thirdTextField: MakerTextField!
+    
     internal var inputMode = MakerInputMode.hex {
         didSet {
             switch inputMode {
@@ -40,30 +41,10 @@ class RGBHSVMakerView: UIView {
             currentTextField.colorComponentValue = currentValue
         }
     }
-    
-    internal var firstValue : Int {
-        get{
-            return firstTextField.colorComponentValue
-        }
-    }
-    
-    internal var secondValue : Int {
-        get{
-            return secondTextField.colorComponentValue
-        }
-    }
-    
-    internal var thirdValue : Int {
-        get{
-            return thirdTextField.colorComponentValue
-        }
-    }
-    
-    
+
     @IBAction func tapTitleButton(_ sender: UIButton) {
         if let view = superview as? ColorMakerView{
             view.inputMode = .dec
-            currentTextField.backgroundColor = textFieldFocusedBackgroundColor
         }
     }
     
@@ -74,10 +55,6 @@ class RGBHSVMakerView: UIView {
         titleButton.layer.borderColor = UIColor.black.cgColor
         titleButton.layer.borderWidth = 1
         titleButton.layer.cornerRadius = 5
-        
-        firstTextField.isUserInteractionEnabled = false
-        secondTextField.isUserInteractionEnabled = false
-        thirdTextField.isUserInteractionEnabled = false
         
         currentTextField = firstTextField
         currentTextField.isFocusedOn = true
@@ -112,4 +89,12 @@ class RGBHSVMakerView: UIView {
         currentTextField.isFocusedOn = true
     }
     
+    internal var currentColor : UIColor {
+        get{
+            let firstValue = CGFloat(firstTextField.colorComponentValue)/255.0
+            let secondValue = CGFloat(secondTextField.colorComponentValue)/255.0
+            let thirdValue = CGFloat(thirdTextField.colorComponentValue)/255.0
+            return colorStyle == .rgb ? UIColor(red: firstValue, green: secondValue, blue: thirdValue, alpha: 1) : UIColor(hue: firstValue, saturation: secondValue, brightness: thirdValue, alpha: 1)
+        }
+    }
 }

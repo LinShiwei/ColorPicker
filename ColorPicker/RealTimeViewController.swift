@@ -12,10 +12,10 @@ import AVFoundation
 
 class RealTimeViewController: UIViewController {
 
-    var camera : Camera?
-    var cameraRawData : RawDataOutput?
+    private var camera : Camera?
+    private var cameraRawData : RawDataOutput?
     
-    var cameraStop : Bool = true
+    private var cameraStop = true
     
     private let colorCollectionSourceManager = ColorCollectionSourceManager.sharedManager
     
@@ -28,7 +28,6 @@ class RealTimeViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        
         if camera == nil {
             cameraRawData = RawDataOutput()
             cameraRawData!.dataAvailableCallback = {data in
@@ -74,14 +73,11 @@ class RealTimeViewController: UIViewController {
     @IBAction func pauseCapture(_ sender: UIBarButtonItem) {
         if cameraStop {
             camera?.startCapture()
-//            cameraControlBtn = UIBarButtonItem(barButtonSystemItem: .pause, target: self, action: #selector(pauseCapture(_:)))
             sender.image = #imageLiteral(resourceName: "Pause Filled-22")
         } else {
             camera?.stopCapture()
-//            cameraControlBtn = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(pauseCapture(_:)))
             sender.image = #imageLiteral(resourceName: "Play Filled-22")
         }
         cameraStop = !cameraStop
-        
     }
 }

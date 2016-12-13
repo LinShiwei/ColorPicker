@@ -42,7 +42,7 @@ class ColorInformationView: UIView {
         }
         
         for constraint in constraints where constraint.identifier == "ColorInformationViewHeight" {
-            constraint.constant = SizeAdaptation.sharedAdaptation.pickerInformationViewHeight
+            constraint.constant = SizeAdaptation.sharedAdaptation.colorInformationViewHeight
         }
     }
 }

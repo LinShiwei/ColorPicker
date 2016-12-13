@@ -12,8 +12,11 @@ enum MakerInputMode {
 }
 
 class ColorMakerView: UIView {
-
-    var inputMode = MakerInputMode.dec {
+    
+    private var rgbhsvMakerView : RGBHSVMakerView?
+    private var hexMakerView : HEXColorMakerView?
+    
+    internal var inputMode = MakerInputMode.dec {
         didSet{
             for view in superview!.subviews where view is InputButtonsContainerView{
                 (view as! InputButtonsContainerView).inputMode = inputMode
@@ -23,10 +26,6 @@ class ColorMakerView: UIView {
         }
     }
 
-    var rgbhsvMakerView : RGBHSVMakerView?
-    var hexMakerView : HEXColorMakerView?
-    
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -84,13 +83,10 @@ class ColorMakerView: UIView {
     
     internal func getCurrentColor()-> UIColor {
         guard let rgbhsvView = rgbhsvMakerView, let _ = hexMakerView else {return UIColor.white}
-        let firstValue = CGFloat(rgbhsvView.firstValue)/255.0
-        let secondValue = CGFloat(rgbhsvView.secondValue)/255.0
-        let thirdValue = CGFloat(rgbhsvView.thirdValue)/255.0
-        return colorStyle == .rgb ? UIColor(red: firstValue, green: secondValue, blue: thirdValue, alpha: 1) : UIColor(hue: firstValue, saturation: secondValue, brightness: thirdValue, alpha: 1)
+        return rgbhsvView.currentColor
     }
     
-    
+    //MARK: Help func
     private func hexToDecInt(num:String) -> Int {
         let str = num.uppercased()
         var sum = 0

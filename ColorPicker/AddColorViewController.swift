@@ -20,7 +20,6 @@ class AddColorViewController: UIViewController {
         super.viewDidLoad()
         colorIndicationView.layer.borderWidth = 1
         colorIndicationView.layer.borderColor = UIColor.black.cgColor
-
     }
 
     @IBAction func tapAmongInputButtons(_ sender: UIButton) {
@@ -37,6 +36,7 @@ class AddColorViewController: UIViewController {
             fatalError()
         }
     }
+    
     @IBAction func saveCurrentColor(_ sender: UIBarButtonItem) {
         
         colorCollectionSourceManager.saveOneCollectedColor(color: CollectedColor(date: Date(), color: colorMakerView.getCurrentColor())){[unowned self] success in

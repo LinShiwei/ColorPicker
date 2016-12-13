@@ -42,25 +42,7 @@ class HEXColorMakerView: UIView {
             currentTextField.colorComponentValue = currentValue 
         }
     }
-    
-    internal var firstValue : Int {
-        get{
-            return firstTextField.colorComponentValue
-        }
-    }
-    
-    internal var secondValue : Int {
-        get{
-            return secondTextField.colorComponentValue
-        }
-    }
-    
-    internal var thirdValue : Int {
-        get{
-            return thirdTextField.colorComponentValue
-        }
-    }
-    
+
     @IBAction func tapTitleButton(_ sender: UIButton) {
         if let view = superview as? ColorMakerView{
             view.inputMode = .hex
@@ -69,21 +51,17 @@ class HEXColorMakerView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        titleButton.layer.borderColor = UIColor.lightGray.cgColor
         titleButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        titleButton.layer.borderColor = UIColor.lightGray.cgColor
         titleButton.layer.borderWidth = 1
         titleButton.layer.cornerRadius = 5
-        
-        firstTextField.isUserInteractionEnabled = false
-        secondTextField.isUserInteractionEnabled = false
-        thirdTextField.isUserInteractionEnabled = false
         
         firstTextField.focusedBackgroundColor = UIColor.white
         secondTextField.focusedBackgroundColor = UIColor.white
         thirdTextField.focusedBackgroundColor = UIColor.white
         
         currentTextField = firstTextField
-//        currentTextField.isFocusedOn = true
+//        currentTextField.isFocusedOn = false
         
         if colorStyle == .hsv {
             firstTextField.colorComponentValue = 0

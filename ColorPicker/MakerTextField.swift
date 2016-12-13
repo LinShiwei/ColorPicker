@@ -31,5 +31,6 @@ internal class MakerTextField: UITextField {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         placeholder = String(colorComponentValue)
+        isUserInteractionEnabled = false
     }
 }

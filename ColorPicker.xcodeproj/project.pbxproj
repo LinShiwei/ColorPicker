@@ -142,6 +142,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5632728F1DFEF111009DC749 /* ColorInformationView */ = {
+			isa = PBXGroup;
+			children = (
+				5649464E1DF27F160046491F /* ColorInformationView.swift */,
+				5649465C1DF29D280046491F /* ColorComponentsContainerView.swift */,
+				564946511DF28B670046491F /* ColorComponentView.swift */,
+				564946531DF28B7D0046491F /* ColorComponentView.xib */,
+			);
+			name = ColorInformationView;
+			sourceTree = "<group>";
+		};
 		564946221DF26C870046491F = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +176,6 @@
 				564946601DF2B9FE0046491F /* ColorCollectionSourceManager.swift */,
 				56024C751DF9004E00DC8589 /* SizeAdaptation.swift */,
 				56D054331DF5492200282B70 /* UIImage+getPixelColor.swift */,
-				5649464E1DF27F160046491F /* ColorInformationView.swift */,
 				56159CB51DFA64E700475DCF /* GPUImage-iOS.xcodeproj */,
 				5649464A1DF27E140046491F /* ColorColletcionVC */,
 				56159CB41DFA631700475DCF /* RealTimeVC */,
@@ -179,6 +189,7 @@
 		564946451DF27DA70046491F /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				5632728F1DFEF111009DC749 /* ColorInformationView */,
 				564946321DF26C880046491F /* Main.storyboard */,
 				564946381DF26C880046491F /* Assets.xcassets */,
 				5649462E1DF26C880046491F /* AppDelegate.swift */,
@@ -195,9 +206,6 @@
 			children = (
 				564946431DF27D900046491F /* ColorCollectionViewController.swift */,
 				5649464B1DF27E710046491F /* CollectedColorTableViewCell.swift */,
-				5649465C1DF29D280046491F /* ColorComponentsContainerView.swift */,
-				564946511DF28B670046491F /* ColorComponentView.swift */,
-				564946531DF28B7D0046491F /* ColorComponentView.xib */,
 			);
 			name = ColorColletcionVC;
 			sourceTree = "<group>";
@@ -215,15 +223,23 @@
 			isa = PBXGroup;
 			children = (
 				564946481DF27DF10046491F /* AddColorViewController.swift */,
+				56C88C2C1DFFBB9700FAD3BA /* ColorMakerView */,
+				56D054351DF560D100282B70 /* InputButtonsContainerView.swift */,
+			);
+			name = AddColorVC;
+			sourceTree = "<group>";
+		};
+		56C88C2C1DFFBB9700FAD3BA /* ColorMakerView */ = {
+			isa = PBXGroup;
+			children = (
 				567150901DF307E000D22A33 /* ColorMakerView.swift */,
 				567150961DF308B000D22A33 /* RGBHSVMakerView.swift */,
 				567150981DF308D800D22A33 /* RGBHSVMakerView.xib */,
 				567150941DF3088800D22A33 /* HEXColorMakerView.swift */,
 				5671509A1DF308E800D22A33 /* HEXColorMakerView.xib */,
 				56B3C9A81DF42C3D0096545A /* MakerTextField.swift */,
-				56D054351DF560D100282B70 /* InputButtonsContainerView.swift */,
 			);
-			name = AddColorVC;
+			name = ColorMakerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

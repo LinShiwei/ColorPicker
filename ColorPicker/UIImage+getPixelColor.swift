@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIImage {
-    func getPixelColor(pos: CGPoint) -> UIColor {
+    internal func getPixelColor(pos: CGPoint) -> UIColor {
         //当图片尺寸是 1600*1600 时，pos 取值范围应该是 0～1599
         if pos.x<0 || pos.y<0 || pos.x>=self.size.width || pos.y>=self.size.height {
             return UIColor.white

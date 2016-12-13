@@ -470,7 +470,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2A-RI-BYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2046" y="1672"/>
+            <point key="canvasLocation" x="2044" y="1473"/>
         </scene>
         <!--取色VC-->
         <scene sceneID="er3-cd-bez">
@@ -503,7 +503,7 @@
                                 <constraints>
                                     <constraint firstItem="oZA-zh-UF7" firstAttribute="leading" secondItem="Z07-0m-JRj" secondAttribute="leading" constant="8" id="59J-x2-hR6"/>
                                     <constraint firstItem="oZA-zh-UF7" firstAttribute="top" secondItem="Z07-0m-JRj" secondAttribute="top" constant="8" id="6b6-g6-BeY"/>
-                                    <constraint firstAttribute="height" constant="88" identifier="PickColorInformationViewHeight" id="8Ai-q8-8D5"/>
+                                    <constraint firstAttribute="height" constant="88" identifier="ColorInformationViewHeight" id="8Ai-q8-8D5"/>
                                     <constraint firstAttribute="bottom" secondItem="oZA-zh-UF7" secondAttribute="bottom" constant="8" id="DA9-bf-T3v"/>
                                     <constraint firstAttribute="trailing" secondItem="f3d-te-wRx" secondAttribute="trailing" constant="8" id="XT0-9g-43c"/>
                                     <constraint firstItem="f3d-te-wRx" firstAttribute="leading" secondItem="oZA-zh-UF7" secondAttribute="trailing" constant="8" id="lxz-pt-0WR"/>
@@ -608,7 +608,7 @@
                                     <constraint firstItem="CBc-lk-U6e" firstAttribute="top" secondItem="Emg-IC-sw6" secondAttribute="top" constant="8" id="GFS-y6-xBm"/>
                                     <constraint firstItem="X2Y-j9-8zW" firstAttribute="leading" secondItem="CBc-lk-U6e" secondAttribute="trailing" constant="8" id="O4o-Lh-acu"/>
                                     <constraint firstItem="CBc-lk-U6e" firstAttribute="leading" secondItem="Emg-IC-sw6" secondAttribute="leading" constant="8" id="RvU-2y-Al3"/>
-                                    <constraint firstAttribute="height" constant="88" identifier="PickColorInformationViewHeight" id="hlR-L9-OmS"/>
+                                    <constraint firstAttribute="height" constant="88" identifier="ColorInformationViewHeight" id="hlR-L9-OmS"/>
                                     <constraint firstItem="X2Y-j9-8zW" firstAttribute="top" secondItem="Emg-IC-sw6" secondAttribute="top" constant="8" id="j5j-3d-2KQ"/>
                                     <constraint firstAttribute="trailing" secondItem="X2Y-j9-8zW" secondAttribute="trailing" constant="8" id="luH-gd-TCp"/>
                                     <constraint firstAttribute="bottom" secondItem="CBc-lk-U6e" secondAttribute="bottom" constant="8" id="r9K-wc-zbV"/>

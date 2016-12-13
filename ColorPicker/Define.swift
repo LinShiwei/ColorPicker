@@ -36,7 +36,7 @@ internal struct CollectedColor {
 
 internal let sharedAlertVC : UIAlertController = {
     if isLanguageChineseSimple{
-        let alert = UIAlertController(title: "保存", message: "保存成功", preferredStyle: .alert)
+        let alert = UIAlertController(title: "保存", message: "保存成功。", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "好", style: .default, handler: nil)
         alert.addAction(okAction)
         return alert
