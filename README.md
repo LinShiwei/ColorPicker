@@ -22,6 +22,7 @@ An app for picking color，has been published [in AppStore](https://itunes.apple
 
 
 一、支持多种色彩编码形式，十六进制、十进制、归一化参数；
+
 二、支持实时取色、图片取色、自主配色；
 
 - 实时取色：通过相机获取周围的颜色;
@@ -29,7 +30,9 @@ An app for picking color，has been published [in AppStore](https://itunes.apple
 - 自主配色：进行十进制、十六进制、RGB/HSV 多种方式配色；
 
 三、颜色收藏，色彩预览；
+
 四、适配 iPhone 和 iPad；
+
 五、本地化中文和英语两种语言。
 
 ## Framework & Library
