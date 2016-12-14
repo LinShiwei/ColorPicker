@@ -1,6 +1,7 @@
 # ColorPicker
 
 An app for picking color，has been published [in AppStore](https://itunes.apple.com/cn/app/colorpicker-pick-color-easily/id1183292373?mt=8).
+
 一个专为开发者设计的取色应用，已上架 AppStore，[链接](https://itunes.apple.com/cn/app/colorpicker-pick-color-easily/id1183292373?mt=8)。
 
 ## Quick Look
