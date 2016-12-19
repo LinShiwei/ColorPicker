@@ -19,10 +19,10 @@ class InputButtonsContainerView: UIView {
         for view in subviews {
             for btn in view.subviews where btn is UIButton {
                 let button = btn as! UIButton
-                button.layer.cornerRadius = SizeAdaptation.sharedAdaptation.inputButtonCornerRadius
+                button.layer.cornerRadius = SizeAdaptation.shared.inputButtonCornerRadius
                 button.layer.borderWidth = 1
                 button.layer.borderColor = UIColor.black.cgColor
-                button.titleLabel?.font = UIFont.systemFont(ofSize: SizeAdaptation.sharedAdaptation.inputButtonFontSize)
+                button.titleLabel?.font = UIFont.systemFont(ofSize: SizeAdaptation.shared.inputButtonFontSize)
                 if button.tag > 9 && button.tag < 16 {
                     hexButtons.append(button)
                 }

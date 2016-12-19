@@ -22,13 +22,13 @@ class PickColorViewController: UIViewController {
     @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
 
     private var colorAnchorView : ColorAnchorView!
-    private let colorCollectionSourceManager = ColorCollectionSourceManager.sharedManager
-
+    private let colorCollectionSourceManager = ColorCollectionSourceManager.shared
+//MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         sourceImageView.image = UIImage(named: "PickColorImage")
-        colorAnchorView = ColorAnchorView(center: CGPoint(x: windowBounds.width/2, y: windowBounds.height/2), size: SizeAdaptation.sharedAdaptation.colorAnchorViewSize, targetView: view)
+        colorAnchorView = ColorAnchorView(center: CGPoint(x: windowBounds.width/2, y: windowBounds.height/2), size: SizeAdaptation.shared.colorAnchorViewSize, targetView: view)
        
         self.view.addSubview(colorAnchorView)
     }
@@ -38,7 +38,7 @@ class PickColorViewController: UIViewController {
         
         updateMinZoomScaleForSize(size: imageContainerScrollView.bounds.size)
     }
-    
+//MARK: help func
     fileprivate func updateMinZoomScaleForSize(size: CGSize) {
         
         let widthScale = size.width / sourceImageView.bounds.width
@@ -68,7 +68,7 @@ class PickColorViewController: UIViewController {
         colorAnchorView.refreshImage()
         colorInformationView.currentColor = sourceImageView.image!.getPixelColor(pos: pointInImage)
     }
-    
+//MARK: IBAction
     @IBAction func longPressToActiveAnchor(_ sender: UILongPressGestureRecognizer) {
         let posInImageView = sender.location(in: imageContainerScrollView)
         if posInImageView.x<0 || posInImageView.y<0 || posInImageView.x>imageContainerScrollView.contentSize.width || posInImageView.y>imageContainerScrollView.contentSize.height {

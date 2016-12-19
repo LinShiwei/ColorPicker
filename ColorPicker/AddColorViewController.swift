@@ -14,7 +14,7 @@ class AddColorViewController: UIViewController {
     @IBOutlet weak var colorMakerView: ColorMakerView!
     @IBOutlet weak var inputButtonsContainerView: InputButtonsContainerView!
     
-    private let colorCollectionSourceManager = ColorCollectionSourceManager.sharedManager
+    private let colorCollectionSourceManager = ColorCollectionSourceManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()

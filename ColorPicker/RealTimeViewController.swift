@@ -17,12 +17,12 @@ class RealTimeViewController: UIViewController {
     
     private var cameraStop = true
     
-    private let colorCollectionSourceManager = ColorCollectionSourceManager.sharedManager
+    private let colorCollectionSourceManager = ColorCollectionSourceManager.shared
     
     @IBOutlet weak var cameraControlBtn: UIBarButtonItem!
     @IBOutlet weak var renderView: RenderView!
     @IBOutlet weak var colorInformationView: ColorInformationView!
-    
+//MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -61,6 +61,7 @@ class RealTimeViewController: UIViewController {
         super.viewDidDisappear(animated)
         camera?.stopCapture()
     }
+//MARK: IBAction
     @IBAction func saveCurrentColor(_ sender: UIBarButtonItem) {
         colorCollectionSourceManager.saveOneCollectedColor(color: CollectedColor(date: Date(), color: colorInformationView.currentColor)){success in
             if !success {

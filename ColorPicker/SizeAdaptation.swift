@@ -9,7 +9,7 @@
 import UIKit
 
 internal class SizeAdaptation {
-    static let sharedAdaptation = SizeAdaptation()
+    static let shared = SizeAdaptation()
     
     internal let tableViewCellHeight : CGFloat = isIPhone ? 88 : 104
     internal let inputButtonFontSize : CGFloat = isIPhone ? 18 : 36

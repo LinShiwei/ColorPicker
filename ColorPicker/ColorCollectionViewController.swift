@@ -10,7 +10,7 @@ import UIKit
 
 class ColorCollectionViewController: UIViewController {
 
-    fileprivate let colorCollectionSourceManager = ColorCollectionSourceManager.sharedManager
+    fileprivate let colorCollectionSourceManager = ColorCollectionSourceManager.shared
     
     fileprivate var collectedColors = [CollectedColor]()
     
@@ -50,7 +50,7 @@ class ColorCollectionViewController: UIViewController {
 
 extension ColorCollectionViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return SizeAdaptation.sharedAdaptation.tableViewCellHeight
+        return SizeAdaptation.shared.tableViewCellHeight
     }
     
     @objc(tableView:canFocusRowAtIndexPath:) func tableView(_ tableView: UITableView, canFocusRowAt indexPath: IndexPath) -> Bool {

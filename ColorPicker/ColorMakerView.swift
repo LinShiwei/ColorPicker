@@ -34,6 +34,7 @@ class ColorMakerView: UIView {
         initMakerViews()
     }
     
+    //MARK: interface
     private func initMakerViews(){
         if rgbhsvMakerView == nil {
             if let viewFromNib = Bundle.main.loadNibNamed("RGBHSVMakerView", owner: self, options: nil)?.first as? RGBHSVMakerView {

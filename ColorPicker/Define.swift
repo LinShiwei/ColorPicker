@@ -9,14 +9,13 @@
 import Foundation
 import UIKit
 
+//MARK: Global value
 internal var colorStyle = ColorComponentsStyle.rgb
-
-internal let windowBounds = UIScreen.main.bounds
-
 internal let textFieldFocusedBackgroundColor = UIColor.yellow
 
+//MARK: Constant
+internal let windowBounds = UIScreen.main.bounds
 internal let isIPhone = (UI_USER_INTERFACE_IDIOM() == .phone)
-
 internal let isLanguageChineseSimple : Bool = {
     if let languageID = Bundle.main.preferredLocalizations.first,languageID.contains("zh-Hans"){
         return true

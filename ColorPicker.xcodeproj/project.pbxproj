@@ -191,10 +191,10 @@
 			children = (
 				5632728F1DFEF111009DC749 /* ColorInformationView */,
 				564946321DF26C880046491F /* Main.storyboard */,
+				5649463A1DF26C880046491F /* LaunchScreen.storyboard */,
 				564946381DF26C880046491F /* Assets.xcassets */,
 				5649462E1DF26C880046491F /* AppDelegate.swift */,
 				564946351DF26C880046491F /* ColorPicker.xcdatamodeld */,
-				5649463A1DF26C880046491F /* LaunchScreen.storyboard */,
 				5649463D1DF26C880046491F /* Info.plist */,
 				563E51441DFE8209001002F9 /* InfoPlist.strings */,
 			);

@@ -12,7 +12,7 @@ class ColorAnchorView: UIView {
 
     private let ringGap : CGFloat = -2
 
-    private let magnifierView = UIView(frame: CGRect(origin: CGPoint.zero, size: SizeAdaptation.sharedAdaptation.magnifierViewSize))
+    private let magnifierView = UIView(frame: CGRect(origin: CGPoint.zero, size: SizeAdaptation.shared.magnifierViewSize))
     private let magnifyingImageView = UIImageView()
     
     internal var targetView = UIView()
@@ -105,5 +105,4 @@ class ColorAnchorView: UIView {
         newImage = resizeImage(newImage!, toNewSize: magnifyingImageView.frame.size)
         magnifyingImageView.image = newImage
     }
-    
 }
