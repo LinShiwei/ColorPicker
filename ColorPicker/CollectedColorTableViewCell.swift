@@ -8,9 +8,15 @@
 
 import UIKit
 
+internal protocol CellManageDelegate {
+    func deleteCell(sender: UITableViewCell)
+}
+
 class CollectedColorTableViewCell: UITableViewCell {
 
     @IBOutlet weak var colorInformationView: ColorInformationView!
+    
+    internal var delegate: CellManageDelegate?
     
     internal var color = UIColor.white{
         didSet{
@@ -44,9 +50,24 @@ class CollectedColorTableViewCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
+        addGesture()
     }
 
     internal func updateColorValue(){
         colorInformationView.currentColor = color
+    }
+    
+    internal func addGesture(){
+        let cellSliderGestureRecognizer = DRCellSlideGestureRecognizer()
+
+        let circleAction = DRCellSlideAction(forFraction: -0.25)
+        circleAction?.icon = #imageLiteral(resourceName: "Delete")
+        circleAction?.activeBackgroundColor = Theme.shared.cellSwipeToDeleteColor
+        circleAction?.behavior = .pushBehavior
+        circleAction?.didTriggerBlock = {[unowned self] Void in
+            self.delegate?.deleteCell(sender: self)
+        }
+        cellSliderGestureRecognizer.addActions([circleAction])
+        addGestureRecognizer(cellSliderGestureRecognizer)
     }
 }

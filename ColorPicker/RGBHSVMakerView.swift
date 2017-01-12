@@ -18,9 +18,9 @@ class RGBHSVMakerView: UIView {
         didSet {
             switch inputMode {
             case .dec:
-                firstTextField.focusedBackgroundColor = textFieldFocusedBackgroundColor
-                secondTextField.focusedBackgroundColor = textFieldFocusedBackgroundColor
-                thirdTextField.focusedBackgroundColor = textFieldFocusedBackgroundColor
+                firstTextField.focusedBackgroundColor = Theme.shared.textFieldFocusedBackgroundColor
+                secondTextField.focusedBackgroundColor = firstTextField.focusedBackgroundColor
+                thirdTextField.focusedBackgroundColor = firstTextField.focusedBackgroundColor
                 currentTextField.isFocusedOn = true
                 titleButton.layer.borderColor = UIColor.black.cgColor
             case .hex:

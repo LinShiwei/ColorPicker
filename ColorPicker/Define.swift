@@ -11,7 +11,6 @@ import UIKit
 
 //MARK: Global value
 internal var colorStyle = ColorComponentsStyle.rgb
-internal let textFieldFocusedBackgroundColor = UIColor.yellow
 
 //MARK: Constant
 internal let windowBounds = UIScreen.main.bounds

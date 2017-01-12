@@ -26,9 +26,9 @@ class HEXColorMakerView: UIView {
                 currentTextField.text = ""
                 titleButton.layer.borderColor = UIColor.lightGray.cgColor
             case .hex:
-                firstTextField.focusedBackgroundColor = textFieldFocusedBackgroundColor
-                secondTextField.focusedBackgroundColor = textFieldFocusedBackgroundColor
-                thirdTextField.focusedBackgroundColor = textFieldFocusedBackgroundColor
+                firstTextField.focusedBackgroundColor = Theme.shared.textFieldFocusedBackgroundColor
+                secondTextField.focusedBackgroundColor = firstTextField.focusedBackgroundColor
+                thirdTextField.focusedBackgroundColor = firstTextField.focusedBackgroundColor
                 currentTextField.isFocusedOn = true
                 titleButton.layer.borderColor = UIColor.black.cgColor
             }

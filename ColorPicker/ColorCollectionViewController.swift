@@ -12,20 +12,19 @@ class ColorCollectionViewController: UIViewController {
 
     fileprivate let colorCollectionSourceManager = ColorCollectionSourceManager.shared
     
-    fileprivate var collectedColors = [CollectedColor]()
+//    fileprivate var collectedColors = [CollectedColor]()
     
-    @IBOutlet weak var colorCollectionTableView: UITableView!
+    @IBOutlet weak var colorCollectionTableView: CollectedColorTableView!
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-    
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         colorCollectionSourceManager.getAllCollectedColor{[unowned self](success,colors) in
             if(success&&(colors != nil)){
-                self.collectedColors = colors!
+                self.colorCollectionTableView.collectedColors = colors!
                 self.colorCollectionTableView.reloadData()
             }else{
                 print("fail to getColor")
@@ -53,22 +52,22 @@ extension ColorCollectionViewController: UITableViewDelegate{
         return SizeAdaptation.shared.tableViewCellHeight
     }
     
-    @objc(tableView:canFocusRowAtIndexPath:) func tableView(_ tableView: UITableView, canFocusRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    @objc(tableView:commitEditingStyle:forRowAtIndexPath:) func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            colorCollectionSourceManager.deleteOneCollectedColor(color: collectedColors[indexPath.row]){success in
-                if !success{
-                    print("fail to delete color")
-                }
-            }
-            collectedColors.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-    }
-    
+//    @objc(tableView:canFocusRowAtIndexPath:) func tableView(_ tableView: UITableView, canFocusRowAt indexPath: IndexPath) -> Bool {
+//        return false
+//    }
+//    
+//    @objc(tableView:commitEditingStyle:forRowAtIndexPath:) func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            colorCollectionSourceManager.deleteOneCollectedColor(color: colorCollectionTableView.collectedColors[indexPath.row]){success in
+//                if !success{
+//                    print("fail to delete color")
+//                }
+//            }
+//            colorCollectionTableView.collectedColors.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//        }
+//    }
+//    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pasteBoard = UIPasteboard.general
         pasteBoard.string = (tableView.cellForRow(at: indexPath) as! CollectedColorTableViewCell).colorInformation
@@ -96,12 +95,18 @@ extension ColorCollectionViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return collectedColors.count
+        guard let table = tableView as? CollectedColorTableView else {
+            return 0
+        }
+        return table.collectedColors.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CollectedColorTableViewCell", for: indexPath) as! CollectedColorTableViewCell
-        cell.color = collectedColors[indexPath.row].color
+        if let table = tableView as? CollectedColorTableView {
+            cell.color = table.collectedColors[indexPath.row].color
+            cell.delegate = table
+        }
         return cell
     }
 
