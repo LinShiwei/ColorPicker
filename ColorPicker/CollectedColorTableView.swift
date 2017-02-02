@@ -14,7 +14,9 @@ class CollectedColorTableView: UITableView {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-
+        
+        self.emptyDataSetSource = self
+        self.emptyDataSetDelegate = self
         tableFooterView = UIView()
     }
 }
@@ -28,7 +30,25 @@ extension CollectedColorTableView: CellManageDelegate {
                 }
             }
             collectedColors.remove(at: indexPath.row)
+            beginUpdates()
             deleteRows(at: [indexPath], with: .left)
+            endUpdates()
         }
     }
 }
+
+extension CollectedColorTableView: DZNEmptyDataSetSource,DZNEmptyDataSetDelegate {
+
+    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let dic = [
+            NSFontAttributeName: UIFont.systemFont(ofSize: 17)
+        ]
+        let text = NSAttributedString(string: LocalizationStrings.shared.tableEmptyString, attributes: dic)
+        return text
+    }
+    
+    func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView) -> Bool {
+        return false
+    }
+}
+

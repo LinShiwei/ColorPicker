@@ -33,6 +33,8 @@
 		567150991DF308D800D22A33 /* RGBHSVMakerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 567150981DF308D800D22A33 /* RGBHSVMakerView.xib */; };
 		5671509B1DF308E800D22A33 /* HEXColorMakerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5671509A1DF308E800D22A33 /* HEXColorMakerView.xib */; };
 		56A267151DFBD8F400D2BAFF /* RenderContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A267141DFBD8F400D2BAFF /* RenderContainerView.swift */; };
+		56AD01CD1E43178700E449F4 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AD01CC1E43178700E449F4 /* UIScrollView+EmptyDataSet.m */; };
+		56AD01D11E4318EB00E449F4 /* LocalizationStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AD01D01E4318EB00E449F4 /* LocalizationStrings.swift */; };
 		56B1D6341DF4589C00E6B00C /* ColorAnchorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B1D6331DF4589C00E6B00C /* ColorAnchorView.swift */; };
 		56B3C9A91DF42C3D0096545A /* MakerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3C9A81DF42C3D0096545A /* MakerTextField.swift */; };
 		56D054341DF5492200282B70 /* UIImage+getPixelColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D054331DF5492200282B70 /* UIImage+getPixelColor.swift */; };
@@ -111,6 +113,9 @@
 		567150981DF308D800D22A33 /* RGBHSVMakerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGBHSVMakerView.xib; sourceTree = "<group>"; };
 		5671509A1DF308E800D22A33 /* HEXColorMakerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HEXColorMakerView.xib; sourceTree = "<group>"; };
 		56A267141DFBD8F400D2BAFF /* RenderContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderContainerView.swift; sourceTree = "<group>"; };
+		56AD01CB1E43178700E449F4 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		56AD01CC1E43178700E449F4 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		56AD01D01E4318EB00E449F4 /* LocalizationStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationStrings.swift; sourceTree = "<group>"; };
 		56B1D6331DF4589C00E6B00C /* ColorAnchorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorAnchorView.swift; sourceTree = "<group>"; };
 		56B3C9A81DF42C3D0096545A /* MakerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakerTextField.swift; sourceTree = "<group>"; };
 		56D054331DF5492200282B70 /* UIImage+getPixelColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+getPixelColor.swift"; sourceTree = "<group>"; };
@@ -187,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				56DF7FF51E27B5CE00A1C791 /* ColorPicker-Bridging-Header.h */,
+				56AD01CF1E4317AB00E449F4 /* DZNEmptyDataSet */,
 				56DF80001E27B5D800A1C791 /* DRCellSlide */,
 				5649465E1DF2B1A10046491F /* Define.swift */,
 				56DF80011E27B70200A1C791 /* Theme.swift */,
@@ -206,6 +212,7 @@
 		564946451DF27DA70046491F /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				56AD01D01E4318EB00E449F4 /* LocalizationStrings.swift */,
 				5632728F1DFEF111009DC749 /* ColorInformationView */,
 				564946321DF26C880046491F /* Main.storyboard */,
 				5649463A1DF26C880046491F /* LaunchScreen.storyboard */,
@@ -245,6 +252,15 @@
 				56D054351DF560D100282B70 /* InputButtonsContainerView.swift */,
 			);
 			name = AddColorVC;
+			sourceTree = "<group>";
+		};
+		56AD01CF1E4317AB00E449F4 /* DZNEmptyDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				56AD01CB1E43178700E449F4 /* UIScrollView+EmptyDataSet.h */,
+				56AD01CC1E43178700E449F4 /* UIScrollView+EmptyDataSet.m */,
+			);
+			name = DZNEmptyDataSet;
 			sourceTree = "<group>";
 		};
 		56C88C2C1DFFBB9700FAD3BA /* ColorMakerView */ = {
@@ -401,7 +417,9 @@
 				56D054361DF560D100282B70 /* InputButtonsContainerView.swift in Sources */,
 				564946371DF26C880046491F /* ColorPicker.xcdatamodeld in Sources */,
 				5649462F1DF26C880046491F /* AppDelegate.swift in Sources */,
+				56AD01CD1E43178700E449F4 /* UIScrollView+EmptyDataSet.m in Sources */,
 				56D054341DF5492200282B70 /* UIImage+getPixelColor.swift in Sources */,
+				56AD01D11E4318EB00E449F4 /* LocalizationStrings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

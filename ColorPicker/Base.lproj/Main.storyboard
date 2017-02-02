@@ -15,7 +15,7 @@
         <!--ColorPicker-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ColorCollectionViewController" customModule="ColorPicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ColorCollectionViewController" customModule="ColorPicker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wq5-Jd-QZR" customClass="CollectedColorTableView" customModule="ColorPicker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CollectedColorTableViewCell" rowHeight="88" id="Q9B-Kq-tbc" customClass="CollectedColorTableViewCell" customModule="ColorPicker" customModuleProvider="target">
@@ -86,9 +86,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wq5-Jd-QZR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Uz-b0-5nC"/>
-                            <constraint firstItem="wq5-Jd-QZR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8Ux-IL-KJe"/>
                             <constraint firstAttribute="trailing" secondItem="wq5-Jd-QZR" secondAttribute="trailing" id="Uiu-Ln-nvx"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wq5-Jd-QZR" secondAttribute="bottom" id="tS4-ti-15g"/>
+                            <constraint firstItem="wq5-Jd-QZR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="z08-or-Arg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ColorPicker" id="mC5-4U-VKU">
@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="936.79999999999995" y="791.15442278860576"/>
+            <point key="canvasLocation" x="935.625" y="790.14084507042253"/>
         </scene>
         <!--配色VC-->
         <scene sceneID="iC0-At-Anv">
@@ -688,7 +688,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Co1-m4-Kyb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="rL5-Nu-gRU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rL5-Nu-gRU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
