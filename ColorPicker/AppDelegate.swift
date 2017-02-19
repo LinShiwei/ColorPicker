@@ -13,10 +13,17 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    override class func initialize() -> Void {
+        //enable preview mode
+//                iRate.sharedInstance().previewMode = true
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let siren = Siren.sharedInstance
+        siren.alertType = .skip
+        siren.checkVersion(checkType: .daily)
         return true
     }
 
