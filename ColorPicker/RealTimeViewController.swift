@@ -56,7 +56,7 @@ class RealTimeViewController: UIViewController {
             }
         }
     }
-    
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         camera?.stopCapture()

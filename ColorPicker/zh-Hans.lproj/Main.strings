@@ -85,3 +85,8 @@
 
 /* Class = "UINavigationItem"; title = "Create"; ObjectID = "zDd-wn-RrM"; */
 "zDd-wn-RrM.title" = "配色";
+
+/* InfoViewController navigationtiem title*/
+"Cdt-2U-nqY.title" = "支持";
+/* InfoBuyingTableViewCell default text */
+"uNn-By-1k5.text" = "获取数据...";

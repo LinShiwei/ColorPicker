@@ -32,6 +32,25 @@
 		567150971DF308B000D22A33 /* RGBHSVMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567150961DF308B000D22A33 /* RGBHSVMakerView.swift */; };
 		567150991DF308D800D22A33 /* RGBHSVMakerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 567150981DF308D800D22A33 /* RGBHSVMakerView.xib */; };
 		5671509B1DF308E800D22A33 /* HEXColorMakerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5671509A1DF308E800D22A33 /* HEXColorMakerView.xib */; };
+		5681B5761E63F75100E367E0 /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B5701E63F75100E367E0 /* PullToRefreshView.swift */; };
+		5681B5771E63F75100E367E0 /* RefreshContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B5711E63F75100E367E0 /* RefreshContainerView.swift */; };
+		5681B5781E63F75100E367E0 /* IndicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B5721E63F75100E367E0 /* IndicationView.swift */; };
+		5681B5791E63F75100E367E0 /* AddingIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B5731E63F75100E367E0 /* AddingIconView.swift */; };
+		5681B57A1E63F75100E367E0 /* PullToRefreshOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B5741E63F75100E367E0 /* PullToRefreshOption.swift */; };
+		5681B57B1E63F75100E367E0 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B5751E63F75100E367E0 /* UIScrollViewExtension.swift */; };
+		5681B5811E63FFD700E367E0 /* ViewControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B5801E63FFD700E367E0 /* ViewControllerManager.swift */; };
+		5681B5831E64000800E367E0 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B5821E64000800E367E0 /* InfoViewController.swift */; };
+		5681B5871E6402B800E367E0 /* DimDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B5851E6402B800E367E0 /* DimDismissAnimationController.swift */; };
+		5681B5881E6402B800E367E0 /* DimPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B5861E6402B800E367E0 /* DimPresentAnimationController.swift */; };
+		5681B58F1E64320900E367E0 /* InfoAboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B58C1E64320900E367E0 /* InfoAboutTableViewCell.swift */; };
+		5681B5901E64320900E367E0 /* InfoBuyingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B58D1E64320900E367E0 /* InfoBuyingTableViewCell.swift */; };
+		5681B5911E64320900E367E0 /* InfoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B58E1E64320900E367E0 /* InfoTableView.swift */; };
+		5681B5941E645B5300E367E0 /* SwiftyStoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5681B5931E645B5300E367E0 /* SwiftyStoreKit.framework */; };
+		5681B5991E645CDA00E367E0 /* NetworkActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B5981E645CDA00E367E0 /* NetworkActivityIndicatorManager.swift */; };
+		5681B59C1E64623100E367E0 /* TableViewTopBounceDecorateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B59A1E64623100E367E0 /* TableViewTopBounceDecorateView.swift */; };
+		5681B59D1E64623100E367E0 /* UITableView+addTopDecorateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B59B1E64623100E367E0 /* UITableView+addTopDecorateView.swift */; };
+		5681B5A01E6472BC00E367E0 /* SharedNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B59F1E6472BC00E367E0 /* SharedNavigationBar.swift */; };
+		5681B5A21E64735D00E367E0 /* TopDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681B5A11E64735D00E367E0 /* TopDecorationView.swift */; };
 		56A267151DFBD8F400D2BAFF /* RenderContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A267141DFBD8F400D2BAFF /* RenderContainerView.swift */; };
 		56AD01CD1E43178700E449F4 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AD01CC1E43178700E449F4 /* UIScrollView+EmptyDataSet.m */; };
 		56AD01D11E4318EB00E449F4 /* LocalizationStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AD01D01E4318EB00E449F4 /* LocalizationStrings.swift */; };
@@ -116,6 +135,25 @@
 		567150961DF308B000D22A33 /* RGBHSVMakerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBHSVMakerView.swift; sourceTree = "<group>"; };
 		567150981DF308D800D22A33 /* RGBHSVMakerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGBHSVMakerView.xib; sourceTree = "<group>"; };
 		5671509A1DF308E800D22A33 /* HEXColorMakerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HEXColorMakerView.xib; sourceTree = "<group>"; };
+		5681B5701E63F75100E367E0 /* PullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
+		5681B5711E63F75100E367E0 /* RefreshContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshContainerView.swift; sourceTree = "<group>"; };
+		5681B5721E63F75100E367E0 /* IndicationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicationView.swift; sourceTree = "<group>"; };
+		5681B5731E63F75100E367E0 /* AddingIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingIconView.swift; sourceTree = "<group>"; };
+		5681B5741E63F75100E367E0 /* PullToRefreshOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshOption.swift; sourceTree = "<group>"; };
+		5681B5751E63F75100E367E0 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		5681B5801E63FFD700E367E0 /* ViewControllerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerManager.swift; sourceTree = "<group>"; };
+		5681B5821E64000800E367E0 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		5681B5851E6402B800E367E0 /* DimDismissAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimDismissAnimationController.swift; sourceTree = "<group>"; };
+		5681B5861E6402B800E367E0 /* DimPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimPresentAnimationController.swift; sourceTree = "<group>"; };
+		5681B58C1E64320900E367E0 /* InfoAboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoAboutTableViewCell.swift; sourceTree = "<group>"; };
+		5681B58D1E64320900E367E0 /* InfoBuyingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoBuyingTableViewCell.swift; sourceTree = "<group>"; };
+		5681B58E1E64320900E367E0 /* InfoTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableView.swift; sourceTree = "<group>"; };
+		5681B5931E645B5300E367E0 /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyStoreKit.framework; path = Carthage/Build/iOS/SwiftyStoreKit.framework; sourceTree = "<group>"; };
+		5681B5981E645CDA00E367E0 /* NetworkActivityIndicatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkActivityIndicatorManager.swift; sourceTree = "<group>"; };
+		5681B59A1E64623100E367E0 /* TableViewTopBounceDecorateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewTopBounceDecorateView.swift; sourceTree = "<group>"; };
+		5681B59B1E64623100E367E0 /* UITableView+addTopDecorateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+addTopDecorateView.swift"; sourceTree = "<group>"; };
+		5681B59F1E6472BC00E367E0 /* SharedNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedNavigationBar.swift; sourceTree = "<group>"; };
+		5681B5A11E64735D00E367E0 /* TopDecorationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopDecorationView.swift; sourceTree = "<group>"; };
 		56A267141DFBD8F400D2BAFF /* RenderContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderContainerView.swift; sourceTree = "<group>"; };
 		56AD01CB1E43178700E449F4 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		56AD01CC1E43178700E449F4 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
@@ -146,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56159CC01DFA652000475DCF /* GPUImage.framework in Frameworks */,
+				5681B5941E645B5300E367E0 /* SwiftyStoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +225,7 @@
 			children = (
 				5649462D1DF26C880046491F /* ColorPicker */,
 				5649462C1DF26C880046491F /* Products */,
+				5681B5921E645B5300E367E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,18 +240,13 @@
 		5649462D1DF26C880046491F /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				56DF7FF51E27B5CE00A1C791 /* ColorPicker-Bridging-Header.h */,
 				56EEFB961E596FB200083C24 /* ThirdPartyFramework */,
-				5649465E1DF2B1A10046491F /* Define.swift */,
-				56DF80011E27B70200A1C791 /* Theme.swift */,
-				564946601DF2B9FE0046491F /* ColorCollectionSourceManager.swift */,
-				56024C751DF9004E00DC8589 /* SizeAdaptation.swift */,
-				56D054331DF5492200282B70 /* UIImage+getPixelColor.swift */,
 				56159CB51DFA64E700475DCF /* GPUImage-iOS.xcodeproj */,
 				5649464A1DF27E140046491F /* ColorColletcionVC */,
 				56159CB41DFA631700475DCF /* RealTimeVC */,
 				5649464D1DF27E860046491F /* PickColorVC */,
 				564946501DF27F5A0046491F /* AddColorVC */,
+				5681B5841E64001E00E367E0 /* InfoVC */,
 				564946451DF27DA70046491F /* Support */,
 			);
 			path = ColorPicker;
@@ -220,7 +255,19 @@
 		564946451DF27DA70046491F /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				5681B5A31E64736300E367E0 /* NavigationBar */,
+				5681B59E1E64623700E367E0 /* TableTopDecorateView */,
+				5649465E1DF2B1A10046491F /* Define.swift */,
+				56DF80011E27B70200A1C791 /* Theme.swift */,
+				564946601DF2B9FE0046491F /* ColorCollectionSourceManager.swift */,
+				56024C751DF9004E00DC8589 /* SizeAdaptation.swift */,
+				56D054331DF5492200282B70 /* UIImage+getPixelColor.swift */,
+				5681B5851E6402B800E367E0 /* DimDismissAnimationController.swift */,
+				5681B5861E6402B800E367E0 /* DimPresentAnimationController.swift */,
+				5681B5801E63FFD700E367E0 /* ViewControllerManager.swift */,
+				56DF7FF51E27B5CE00A1C791 /* ColorPicker-Bridging-Header.h */,
 				56AD01D01E4318EB00E449F4 /* LocalizationStrings.swift */,
+				5681B5981E645CDA00E367E0 /* NetworkActivityIndicatorManager.swift */,
 				5632728F1DFEF111009DC749 /* ColorInformationView */,
 				564946321DF26C880046491F /* Main.storyboard */,
 				5649463A1DF26C880046491F /* LaunchScreen.storyboard */,
@@ -260,6 +307,56 @@
 				56D054351DF560D100282B70 /* InputButtonsContainerView.swift */,
 			);
 			name = AddColorVC;
+			sourceTree = "<group>";
+		};
+		5681B57D1E63F75C00E367E0 /* PullToEnterSupportPage */ = {
+			isa = PBXGroup;
+			children = (
+				5681B5701E63F75100E367E0 /* PullToRefreshView.swift */,
+				5681B5711E63F75100E367E0 /* RefreshContainerView.swift */,
+				5681B5721E63F75100E367E0 /* IndicationView.swift */,
+				5681B5731E63F75100E367E0 /* AddingIconView.swift */,
+				5681B5741E63F75100E367E0 /* PullToRefreshOption.swift */,
+				5681B5751E63F75100E367E0 /* UIScrollViewExtension.swift */,
+			);
+			name = PullToEnterSupportPage;
+			sourceTree = "<group>";
+		};
+		5681B5841E64001E00E367E0 /* InfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				5681B58C1E64320900E367E0 /* InfoAboutTableViewCell.swift */,
+				5681B58D1E64320900E367E0 /* InfoBuyingTableViewCell.swift */,
+				5681B58E1E64320900E367E0 /* InfoTableView.swift */,
+				5681B5821E64000800E367E0 /* InfoViewController.swift */,
+			);
+			name = InfoVC;
+			sourceTree = "<group>";
+		};
+		5681B5921E645B5300E367E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5681B5931E645B5300E367E0 /* SwiftyStoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5681B59E1E64623700E367E0 /* TableTopDecorateView */ = {
+			isa = PBXGroup;
+			children = (
+				5681B59A1E64623100E367E0 /* TableViewTopBounceDecorateView.swift */,
+				5681B59B1E64623100E367E0 /* UITableView+addTopDecorateView.swift */,
+			);
+			name = TableTopDecorateView;
+			sourceTree = "<group>";
+		};
+		5681B5A31E64736300E367E0 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				5681B5A11E64735D00E367E0 /* TopDecorationView.swift */,
+				5681B59F1E6472BC00E367E0 /* SharedNavigationBar.swift */,
+			);
+			name = NavigationBar;
 			sourceTree = "<group>";
 		};
 		56AD01CF1E4317AB00E449F4 /* DZNEmptyDataSet */ = {
@@ -309,6 +406,7 @@
 		56EEFB961E596FB200083C24 /* ThirdPartyFramework */ = {
 			isa = PBXGroup;
 			children = (
+				5681B57D1E63F75C00E367E0 /* PullToEnterSupportPage */,
 				56EEFB9C1E596FF400083C24 /* iRate */,
 				56EEFB951E596F8F00083C24 /* Siren */,
 				56AD01CF1E4317AB00E449F4 /* DZNEmptyDataSet */,
@@ -338,6 +436,7 @@
 				564946281DF26C880046491F /* Frameworks */,
 				564946291DF26C880046491F /* Resources */,
 				56159CB01DFA622D00475DCF /* CopyFiles */,
+				5681B5951E645B5E00E367E0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -427,6 +526,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5681B5951E645B5E00E367E0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyStoreKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		564946271DF26C880046491F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -434,31 +550,49 @@
 			files = (
 				564946611DF2B9FE0046491F /* ColorCollectionSourceManager.swift in Sources */,
 				5649465D1DF29D280046491F /* ColorComponentsContainerView.swift in Sources */,
+				5681B5771E63F75100E367E0 /* RefreshContainerView.swift in Sources */,
 				564946521DF28B670046491F /* ColorComponentView.swift in Sources */,
 				564946441DF27D900046491F /* ColorCollectionViewController.swift in Sources */,
 				56A267151DFBD8F400D2BAFF /* RenderContainerView.swift in Sources */,
 				567150911DF307E000D22A33 /* ColorMakerView.swift in Sources */,
 				56024C761DF9004E00DC8589 /* SizeAdaptation.swift in Sources */,
+				5681B5791E63F75100E367E0 /* AddingIconView.swift in Sources */,
 				564946471DF27DE00046491F /* PickColorViewController.swift in Sources */,
 				5649465F1DF2B1A10046491F /* Define.swift in Sources */,
+				5681B57B1E63F75100E367E0 /* UIScrollViewExtension.swift in Sources */,
 				56DF80041E27B9F400A1C791 /* CollectedColorTableView.swift in Sources */,
 				56B1D6341DF4589C00E6B00C /* ColorAnchorView.swift in Sources */,
 				56159CB31DFA631200475DCF /* RealTimeViewController.swift in Sources */,
 				56DF7FFD1E27B5CF00A1C791 /* DRCellSlideAction.m in Sources */,
+				5681B58F1E64320900E367E0 /* InfoAboutTableViewCell.swift in Sources */,
+				5681B59C1E64623100E367E0 /* TableViewTopBounceDecorateView.swift in Sources */,
+				5681B5811E63FFD700E367E0 /* ViewControllerManager.swift in Sources */,
+				5681B59D1E64623100E367E0 /* UITableView+addTopDecorateView.swift in Sources */,
 				56DF80021E27B70200A1C791 /* Theme.swift in Sources */,
+				5681B5831E64000800E367E0 /* InfoViewController.swift in Sources */,
 				567150951DF3088800D22A33 /* HEXColorMakerView.swift in Sources */,
 				56B3C9A91DF42C3D0096545A /* MakerTextField.swift in Sources */,
 				564946491DF27DF10046491F /* AddColorViewController.swift in Sources */,
+				5681B5761E63F75100E367E0 /* PullToRefreshView.swift in Sources */,
+				5681B5781E63F75100E367E0 /* IndicationView.swift in Sources */,
 				56DF7FFF1E27B5CF00A1C791 /* DRCellSlideGestureRecognizer.m in Sources */,
 				5649464C1DF27E710046491F /* CollectedColorTableViewCell.swift in Sources */,
+				5681B5991E645CDA00E367E0 /* NetworkActivityIndicatorManager.swift in Sources */,
 				56DF7FFE1E27B5CF00A1C791 /* DRCellSlideActionView.m in Sources */,
 				5649464F1DF27F160046491F /* ColorInformationView.swift in Sources */,
+				5681B5901E64320900E367E0 /* InfoBuyingTableViewCell.swift in Sources */,
 				56EEFB9B1E596FEB00083C24 /* iRate.m in Sources */,
+				5681B5881E6402B800E367E0 /* DimPresentAnimationController.swift in Sources */,
+				5681B5871E6402B800E367E0 /* DimDismissAnimationController.swift in Sources */,
 				567150971DF308B000D22A33 /* RGBHSVMakerView.swift in Sources */,
 				56EEFB931E596F8800083C24 /* Siren.swift in Sources */,
 				56D054361DF560D100282B70 /* InputButtonsContainerView.swift in Sources */,
 				564946371DF26C880046491F /* ColorPicker.xcdatamodeld in Sources */,
+				5681B5A21E64735D00E367E0 /* TopDecorationView.swift in Sources */,
+				5681B5A01E6472BC00E367E0 /* SharedNavigationBar.swift in Sources */,
+				5681B57A1E63F75100E367E0 /* PullToRefreshOption.swift in Sources */,
 				5649462F1DF26C880046491F /* AppDelegate.swift in Sources */,
+				5681B5911E64320900E367E0 /* InfoTableView.swift in Sources */,
 				56AD01CD1E43178700E449F4 /* UIScrollView+EmptyDataSet.m in Sources */,
 				56D054341DF5492200282B70 /* UIImage+getPixelColor.swift in Sources */,
 				56AD01D11E4318EB00E449F4 /* LocalizationStrings.swift in Sources */,
@@ -606,6 +740,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 544PNK2P78;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ColorPicker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -624,6 +762,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 544PNK2P78;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ColorPicker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

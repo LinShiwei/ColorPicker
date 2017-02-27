@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "791BD14A69251286DB82E7E7DC5C10ADBAED4E88",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "791BD14A69251286DB82E7E7DC5C10ADBAED4E88" : 9223372036854775807,
+    "3A0ECF10811A23BC689A8A272E74F0891D5578A9" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8FCCA12E-074F-4F56-8113-4F7C6590EA86",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "791BD14A69251286DB82E7E7DC5C10ADBAED4E88" : "ColorPicker\/",
+    "3A0ECF10811A23BC689A8A272E74F0891D5578A9" : "CatchIdea\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ColorPicker",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ColorPicker.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/LinShiwei\/CatchIdea.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3A0ECF10811A23BC689A8A272E74F0891D5578A9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/LinShiwei\/ColorPicker.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "791BD14A69251286DB82E7E7DC5C10ADBAED4E88"
+    }
+  ]
+}

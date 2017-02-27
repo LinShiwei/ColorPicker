@@ -13,9 +13,23 @@ class ColorCollectionViewController: UIViewController {
     fileprivate let colorCollectionSourceManager = ColorCollectionSourceManager.shared
     
     @IBOutlet weak var colorCollectionTableView: CollectedColorTableView!
+    
+    internal let dimPresentAnimationController = DimPresentAnimationController()
+    internal let dimDismissAnimationController = DimDismissAnimationController()
+
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        colorCollectionTableView.addPullRefresh{ [weak self] in
+            
+            if ViewControllermanager.shared.infoVC == nil {
+                self?.performSegue(withIdentifier: "ShowSupportPage", sender: nil)
+            }else{
+                
+            }
+            
+            self?.colorCollectionTableView.stopPullRefreshEver()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +55,21 @@ class ColorCollectionViewController: UIViewController {
         }
         for cell in colorCollectionTableView.visibleCells {
             (cell as! CollectedColorTableViewCell).updateColorValue()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else {return}
+        switch identifier {
+        case "ShowSupportPage":
+            if let destinationViewController = segue.destination as? InfoViewController {
+                ViewControllermanager.shared.infoVC = destinationViewController
+                destinationViewController.transitioningDelegate = self
+                dimPresentAnimationController.dimCenter = CGPoint(x: windowBounds.width/2, y: 88)
+            }
+            break
+        default:
+            break
         }
     }
 }
@@ -83,4 +112,26 @@ extension ColorCollectionViewController: UITableViewDataSource{
         return cell
     }
 
+}
+
+extension ColorCollectionViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch presented {
+        case is InfoViewController:
+            return dimPresentAnimationController
+        default:
+            return nil
+        }
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch dismissed {
+        case is InfoViewController:
+            return dimDismissAnimationController
+        default:
+            return nil
+        }
+        
+    }
 }
