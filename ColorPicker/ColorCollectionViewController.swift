@@ -30,6 +30,11 @@ class ColorCollectionViewController: UIViewController {
             
             self?.colorCollectionTableView.stopPullRefreshEver()
         }
+        
+        self.navigationController?.navigationBar.barTintColor = Theme.shared.mainThemeColor
+        self.navigationController?.navigationBar.tintColor = Theme.shared.barItemColor
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: Theme.shared.navigationTitleColor]
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
