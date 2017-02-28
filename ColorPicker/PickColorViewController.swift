@@ -77,6 +77,19 @@ class PickColorViewController: UIViewController {
             colorAnchorView.center = sender.location(in: view)
             colorAnchorView.refreshImage()
             colorInformationView.currentColor = sourceImageView.image!.getPixelColor(pos: sender.location(in: sourceImageView))
+            switch colorAnchorView.magnifyStyle {
+            case .above:
+                if sender.location(in: nil).y <= colorAnchorView.halfHeight + 64 {
+                    colorAnchorView.magnifyStyle = .below
+                }
+                break
+            case .below:
+                if sender.location(in: nil).y > colorAnchorView.halfHeight + 64 {
+                    colorAnchorView.magnifyStyle = .above
+                }
+                break
+            }
+            
         }
     }
     

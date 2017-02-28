@@ -8,14 +8,34 @@
 
 import UIKit
 
+enum MaginifyStyle {
+    case above,below
+}
+
 class ColorAnchorView: UIView {
 
     private let ringGap : CGFloat = -2
-
+    private let gapBetweenMagnifierAndAnchorView: CGFloat = 20
     private let magnifierView = UIView(frame: CGRect(origin: CGPoint.zero, size: SizeAdaptation.shared.magnifierViewSize))
     private let magnifyingImageView = UIImageView()
     
     internal var targetView = UIView()
+    internal var magnifyStyle: MaginifyStyle = .above {
+        didSet {
+            switch magnifyStyle {
+            case .above:
+                magnifierView.center = CGPoint(x: frame.width/2, y: -magnifierView.frame.height/2-gapBetweenMagnifierAndAnchorView)
+            case .below:
+                magnifierView.center = CGPoint(x: frame.width/2, y: magnifierView.frame.height/2 + frame.height + gapBetweenMagnifierAndAnchorView)
+                break
+            }
+        }
+    }
+    internal var halfHeight: CGFloat {
+        get{
+            return frame.height/2+gapBetweenMagnifierAndAnchorView+magnifierView.frame.height
+        }
+    }
     
     internal init(center: CGPoint, size :CGSize, targetView :UIView){
         let frame = CGRect(x: center.x-size.width/2, y: center.y-size.height/2, width: size.width, height: size.height)
@@ -105,4 +125,6 @@ class ColorAnchorView: UIView {
         newImage = resizeImage(newImage!, toNewSize: magnifyingImageView.frame.size)
         magnifyingImageView.image = newImage
     }
+    
+    
 }

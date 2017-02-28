@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let siren = Siren.sharedInstance
         siren.alertType = .skip
         siren.checkVersion(checkType: .daily)
+        
+        application.statusBarStyle = .lightContent
         return true
     }
 

@@ -48,7 +48,7 @@ extension CollectedColorTableView: DZNEmptyDataSetSource,DZNEmptyDataSetDelegate
     }
     
     func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView) -> Bool {
-        return false
+        return true
     }
 }
 
