@@ -17,7 +17,7 @@ class TableViewTopBounceDecorateView: UIView {
         // Drawing code
     }
     */
-    let imageView = UIImageView(image: #imageLiteral(resourceName: "Icon-50"))
+    let imageView = UIImageView(image: #imageLiteral(resourceName: "Icon-40"))
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.autoresizingMask = .flexibleWidth

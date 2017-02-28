@@ -40,8 +40,8 @@ class RealTimeViewController: UIViewController {
                 
                 let centerPointColor = UIColor(red: r, green: g, blue: b, alpha: a)
                 
-                DispatchQueue.main.async { [unowned self] in
-                    self.colorInformationView.currentColor = centerPointColor
+                DispatchQueue.main.async { [weak self] in
+                    self?.colorInformationView.currentColor = centerPointColor
                 }
             }
             do {

@@ -39,10 +39,10 @@ class ColorCollectionViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        colorCollectionSourceManager.getAllCollectedColor{[unowned self](success,colors) in
+        colorCollectionSourceManager.getAllCollectedColor{[weak self](success,colors) in
             if(success&&(colors != nil)){
-                self.colorCollectionTableView.collectedColors = colors!
-                self.colorCollectionTableView.reloadData()
+                self?.colorCollectionTableView.collectedColors = colors!
+                self?.colorCollectionTableView.reloadData()
             }else{
                 print("fail to getColor")
             }

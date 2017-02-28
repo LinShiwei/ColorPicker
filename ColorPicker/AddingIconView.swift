@@ -15,7 +15,7 @@ class AddingIconView: UIView {
             active ? performActiveAnimation() : performInactiveAnimation()
         }
     }
-    private let transverseLineLayer = CALayer()
+    private let dotLayer = CALayer()
     private let verticalLineLayer = CALayer()
 
     override init(frame: CGRect) {
@@ -25,13 +25,13 @@ class AddingIconView: UIView {
         layer.borderWidth = 2
         layer.borderColor = UIColor.lightGray.cgColor
         
-        transverseLineLayer.frame = CGRect(x: frame.width/4, y: frame.height/2-1, width: frame.width/2, height: 2)
-        transverseLineLayer.backgroundColor = layer.borderColor
+        dotLayer.frame = CGRect(x: frame.width/2-1, y: frame.height/4, width: 2, height: 2)
+        dotLayer.backgroundColor = layer.borderColor
         
-        verticalLineLayer.frame = CGRect(x: frame.width/2-1, y: frame.height/4, width: 2, height: frame.height/2)
+        verticalLineLayer.frame = CGRect(x: frame.width/2-1, y: frame.height/4+4, width: 2, height: frame.height/2-4)
         verticalLineLayer.backgroundColor = layer.borderColor
         
-        layer.addSublayer(transverseLineLayer)
+        layer.addSublayer(dotLayer)
         layer.addSublayer(verticalLineLayer)
     }
     
@@ -40,16 +40,24 @@ class AddingIconView: UIView {
     }
     
     private func performActiveAnimation(){
-        self.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI-0.0000001))
+        self.layer.removeAllAnimations()
+        let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotationAnimation.toValue = M_PI * 2.0
+        rotationAnimation.duration = 0.3
+        self.layer.add(rotationAnimation, forKey: "rotationAnimation")
         self.layer.borderColor = Theme.shared.mainThemeColor.cgColor
-        transverseLineLayer.backgroundColor = layer.borderColor
+        dotLayer.backgroundColor = layer.borderColor
         verticalLineLayer.backgroundColor = layer.borderColor
     }
     
     private func performInactiveAnimation(){
-        self.transform = .identity
+        self.layer.removeAllAnimations()
+        let rotationBackAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotationBackAnimation.toValue = -M_PI * 2.0
+        rotationBackAnimation.duration = 0.3
+        self.layer.add(rotationBackAnimation, forKey: "rotationBackAnimation")
         self.layer.borderColor = UIColor.lightGray.cgColor
-        transverseLineLayer.backgroundColor = layer.borderColor
+        dotLayer.backgroundColor = layer.borderColor
         verticalLineLayer.backgroundColor = layer.borderColor
     }
     

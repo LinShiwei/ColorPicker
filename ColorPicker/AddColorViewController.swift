@@ -39,11 +39,11 @@ class AddColorViewController: UIViewController {
     
     @IBAction func saveCurrentColor(_ sender: UIBarButtonItem) {
         
-        colorCollectionSourceManager.saveOneCollectedColor(color: CollectedColor(date: Date(), color: colorMakerView.getCurrentColor())){[unowned self] success in
+        colorCollectionSourceManager.saveOneCollectedColor(color: CollectedColor(date: Date(), color: colorMakerView.getCurrentColor())){[weak self] success in
             if !success {
                 print("fail to save color")
             }else{
-                self.present(sharedAlertVC,animated: true,completion: nil)
+                self?.present(sharedAlertVC,animated: true,completion: nil)
             }
         }
     }

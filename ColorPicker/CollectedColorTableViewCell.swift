@@ -64,8 +64,10 @@ class CollectedColorTableViewCell: UITableViewCell {
         circleAction?.icon = #imageLiteral(resourceName: "Delete")
         circleAction?.activeBackgroundColor = Theme.shared.cellSwipeToDeleteColor
         circleAction?.behavior = .pushBehavior
-        circleAction?.didTriggerBlock = {[unowned self] Void in
-            self.delegate?.deleteCell(sender: self)
+        circleAction?.didTriggerBlock = {[weak self] Void in
+            if let safeSelf = self {
+                safeSelf.delegate?.deleteCell(sender: safeSelf)
+            }
         }
         cellSliderGestureRecognizer.addActions([circleAction])
         addGestureRecognizer(cellSliderGestureRecognizer)
