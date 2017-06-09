@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">ColorPicker</string>
+    <string name="Null">""</string>
+
+    <string name="colorValueMax">255</string>
+    <string name="colorValueMin">0</string>
+
+    <string name="button_RGB">RGB</string>
+    <string name="button_HEX">HEX</string>
+
+    <string name="button_1">1</string>
+    <string name="button_2">2</string>
+    <string name="button_3">3</string>
+    <string name="button_4">4</string>
+    <string name="button_5">5</string>
+    <string name="button_6">6</string>
+    <string name="button_7">7</string>
+    <string name="button_8">8</string>
+    <string name="button_9">9</string>
+    <string name="button_0">0</string>
+    <string name="button_A">A</string>
+    <string name="button_B">B</string>
+    <string name="button_C">C</string>
+    <string name="button_D">D</string>
+    <string name="button_E">E</string>
+    <string name="button_F">F</string>
+    <string name="button_Tab">Tab</string>
+    <string name="button_Clear">Clear</string>
+</resources>
