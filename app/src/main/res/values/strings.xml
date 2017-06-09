@@ -25,5 +25,5 @@
     <string name="button_E">E</string>
     <string name="button_F">F</string>
     <string name="button_Tab">Tab</string>
-    <string name="button_Clear">Clear</string>
+    <string name="button_Clear">AC</string>
 </resources>
