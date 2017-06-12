@@ -27,18 +27,18 @@ public class AddColorActivity extends AppCompatActivity {
         overridePendingTransition(R.animator.left_to_right,R.animator.right_to_left);
     }
 
-    public void onClickChangeModeButton(View v){
-
-        switch (v.getId()){
-            case R.id.buttonRGB:
-
-                break;
-            case R.id.buttonHEX:
-                Log.i(TAG,"HEX");
-
-                break;
-        }
-    }
+//    public void onClickChangeModeButton(View v){
+//
+//        switch (v.getId()){
+//            case R.id.buttonRGB:
+//
+//                break;
+//            case R.id.buttonHEX:
+//                Log.i(TAG,"HEX");
+//
+//                break;
+//        }
+//    }
 
     public void onClickNumberButton(View v){
         Button btn = (Button)v;

@@ -1,6 +1,8 @@
 package com.example.linshiwei.colorpicker.colormaker;
 
 import android.content.Context;
+import android.support.annotation.Nullable;
+import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
 /**
@@ -8,7 +10,8 @@ import android.widget.LinearLayout;
  */
 
 public class RGBMakerView extends LinearLayout {
-    public RGBMakerView(Context context) {
-        super(context);
+
+    public RGBMakerView(Context context, @Nullable AttributeSet attrs) {
+        super(context, attrs);
     }
 }
