@@ -14,9 +14,7 @@ import com.example.linshiwei.colorpicker.ColorComponentsStyle;
 import com.example.linshiwei.colorpicker.GlobalValue;
 import com.example.linshiwei.colorpicker.R;
 
-import static com.example.linshiwei.colorpicker.ColorComponentsStyle.rgb;
 import static com.example.linshiwei.colorpicker.colormaker.MakerInputMode.hex;
-import static com.example.linshiwei.colorpicker.colormaker.MakerInputMode.rgb;
 
 /**
  * Created by linshiwei on 2017/6/12.
