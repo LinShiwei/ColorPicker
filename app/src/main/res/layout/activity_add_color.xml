@@ -15,7 +15,7 @@
         android:layout_marginRight="8dp"
         app:srcCompat="@android:color/holo_green_dark" />
 
-    <LinearLayout
+    <com.example.linshiwei.colorpicker.colormaker.ColorMakerView
         android:layout_width="match_parent"
         android:layout_height="107dp"
         android:orientation="vertical">
@@ -80,7 +80,7 @@
             android:orientation="horizontal">
 
         </com.example.linshiwei.colorpicker.colormaker.HEXMakerView>
-    </LinearLayout>
+    </com.example.linshiwei.colorpicker.colormaker.ColorMakerView>
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -5,5 +5,5 @@ package com.example.linshiwei.colorpicker.colormaker;
  */
 
 public enum MakerInputMode{
-    hex,rgb
+    hex,dec
 }

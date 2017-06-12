@@ -3,14 +3,18 @@ package com.example.linshiwei.colorpicker.colormaker;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.example.linshiwei.colorpicker.ColorComponentsStyle;
+import com.example.linshiwei.colorpicker.GlobalValue;
 import com.example.linshiwei.colorpicker.R;
 
+import static com.example.linshiwei.colorpicker.ColorComponentsStyle.rgb;
 import static com.example.linshiwei.colorpicker.colormaker.MakerInputMode.hex;
 import static com.example.linshiwei.colorpicker.colormaker.MakerInputMode.rgb;
 
@@ -37,15 +41,31 @@ public class HEXMakerView extends LinearLayout {
         inflater.inflate(R.layout.hex_maker_view,this,true);
 
         mTitleButton = (Button)findViewById(R.id.buttonHEX);
+        mFirstTextField = (MakerTextView)findViewById(R.id.textViewH);
+        mSecondTextField = (MakerTextView)findViewById(R.id.textViewE);
+        mThirdTextField = (MakerTextView)findViewById(R.id.textViewX);
+
+
         mTitleButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 tapTitleButton(v);
             }
         });
-        View child1 = findViewById(R.id.textViewH);
-        View child2 = findViewById(R.id.buttonHEX);
 
+        mFirstTextField.focusedBackgroundColor = Color.WHITE;
+        mSecondTextField.focusedBackgroundColor = Color.WHITE;
+        mThirdTextField.focusedBackgroundColor = Color.WHITE;
+
+        mCurrentTextField = mFirstTextField;
+
+        if(GlobalValue.mColorStyle == ColorComponentsStyle.hsv){
+            mFirstTextField.setColorComponentValue(0);
+            mSecondTextField.setColorComponentValue(0);
+
+            mFirstTextField.setHint("0");
+            mSecondTextField.setHint("0");
+        }
     }
 
     public MakerInputMode getInputMode(){
@@ -55,14 +75,23 @@ public class HEXMakerView extends LinearLayout {
     public void setInputMode(MakerInputMode value){
         inputMode = value;
         switch (inputMode){
-            case hex:
+            case dec:
                 mFirstTextField.focusedBackgroundColor = Color.WHITE;
                 mSecondTextField.focusedBackgroundColor = Color.WHITE;
                 mThirdTextField.focusedBackgroundColor = Color.WHITE;
 
-                break;
-            case rgb:
+                mCurrentTextField.setIsFocusedOn(false);
+                mCurrentTextField.setText("");
+                //待完成//
 
+                break;
+            case hex:
+                mFirstTextField.focusedBackgroundColor = ContextCompat.getColor(getContext(),R.color.textFieldFocusedBackgroundColor);
+                mSecondTextField.focusedBackgroundColor = mFirstTextField.focusedBackgroundColor;
+                mThirdTextField.focusedBackgroundColor = mFirstTextField.focusedBackgroundColor;
+
+                mCurrentTextField.setIsFocusedOn(true);
+                //待完成//
                 break;
         }
     }
@@ -82,5 +111,25 @@ public class HEXMakerView extends LinearLayout {
             ColorMakerView maker = (ColorMakerView)getParent();
             maker.setInputMode(hex);
         }
+    }
+
+    public void clearAllTextFields(){
+        mFirstTextField.setText("");
+        mSecondTextField.setText("");
+        mThirdTextField.setText("");
+    }
+
+    public void switchToNextTextField(){
+        mCurrentTextField.setIsFocusedOn(false);
+        if(mCurrentTextField == mFirstTextField){
+            mCurrentTextField = mSecondTextField;
+        }else{
+            if(mCurrentTextField == mSecondTextField){
+                mCurrentTextField = mThirdTextField;
+            }else{
+                mCurrentTextField = mFirstTextField;
+            }
+        }
+        mCurrentTextField.setIsFocusedOn(true);
     }
 }
