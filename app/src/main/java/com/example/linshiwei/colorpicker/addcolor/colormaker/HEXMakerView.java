@@ -1,8 +1,7 @@
-package com.example.linshiwei.colorpicker.colormaker;
+package com.example.linshiwei.colorpicker.addcolor.colormaker;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.support.annotation.ColorInt;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
@@ -14,27 +13,28 @@ import android.widget.LinearLayout;
 import com.example.linshiwei.colorpicker.ColorComponentsStyle;
 import com.example.linshiwei.colorpicker.GlobalValue;
 import com.example.linshiwei.colorpicker.R;
+import com.example.linshiwei.colorpicker.addcolor.MakerInputMode;
 
-import static com.example.linshiwei.colorpicker.colormaker.MakerInputMode.dec;
-import static com.example.linshiwei.colorpicker.colormaker.MakerInputMode.hex;
+import static com.example.linshiwei.colorpicker.addcolor.MakerInputMode.hex;
+
 
 /**
- * Created by linshiwei on 2017/6/9.
+ * Created by linshiwei on 2017/6/12.
  */
 
-public class RGBMakerView extends LinearLayout {
+public class HEXMakerView extends LinearLayout {
 
     private Button mTitleButton;
     private MakerTextView mFirstTextField;
     private MakerTextView mSecondTextField;
     private MakerTextView mThirdTextField;
 
-    private MakerInputMode inputMode = hex;
+    private MakerInputMode mInputMode = hex;
     private int mCurrentValue = 255;
 
-    public MakerTextView mCurrentTextField;
+    public MakerTextView currentTextField;
 
-    public RGBMakerView(Context context, @Nullable AttributeSet attrs) {
+    public HEXMakerView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
         LayoutInflater inflater = (LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -45,7 +45,7 @@ public class RGBMakerView extends LinearLayout {
         mSecondTextField = (MakerTextView)findViewById(R.id.textViewE);
         mThirdTextField = (MakerTextView)findViewById(R.id.textViewX);
 
-        mTitleButton.setText(GlobalValue.mColorStyle == ColorComponentsStyle.rgb ? "RGB" : "HSV");
+
         mTitleButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -57,8 +57,7 @@ public class RGBMakerView extends LinearLayout {
         mSecondTextField.focusedBackgroundColor = Color.WHITE;
         mThirdTextField.focusedBackgroundColor = Color.WHITE;
 
-        mCurrentTextField = mFirstTextField;
-        mCurrentTextField.setIsFocusedOn(true);
+        currentTextField = mFirstTextField;
 
         if(GlobalValue.mColorStyle == ColorComponentsStyle.hsv){
             mFirstTextField.setColorComponentValue(0);
@@ -70,29 +69,28 @@ public class RGBMakerView extends LinearLayout {
     }
 
     public MakerInputMode getInputMode(){
-        return inputMode;
+        return mInputMode;
     }
 
     public void setInputMode(MakerInputMode value){
-        inputMode = value;
-        switch (inputMode){
+        mInputMode = value;
+        switch (mInputMode){
             case dec:
-                mFirstTextField.focusedBackgroundColor = ContextCompat.getColor(getContext(),R.color.textFieldFocusedBackgroundColor);
-                mSecondTextField.focusedBackgroundColor = mFirstTextField.focusedBackgroundColor;
-                mThirdTextField.focusedBackgroundColor = mFirstTextField.focusedBackgroundColor;
-
-                mCurrentTextField.setIsFocusedOn(true);
-                //待完成//
-
-                break;
-            case hex:
                 mFirstTextField.focusedBackgroundColor = Color.WHITE;
                 mSecondTextField.focusedBackgroundColor = Color.WHITE;
                 mThirdTextField.focusedBackgroundColor = Color.WHITE;
 
-                mCurrentTextField.setIsFocusedOn(false);
-                mCurrentTextField.setText("");
+                currentTextField.setIsFocusedOn(false);
+                currentTextField.setText("");
+                //待完成//
 
+                break;
+            case hex:
+                mFirstTextField.focusedBackgroundColor = ContextCompat.getColor(getContext(),R.color.textFieldFocusedBackgroundColor);
+                mSecondTextField.focusedBackgroundColor = mFirstTextField.focusedBackgroundColor;
+                mThirdTextField.focusedBackgroundColor = mFirstTextField.focusedBackgroundColor;
+
+                currentTextField.setIsFocusedOn(true);
                 //待完成//
                 break;
         }
@@ -104,14 +102,14 @@ public class RGBMakerView extends LinearLayout {
 
     public void setCurrentValue(int value){
         mCurrentValue = value;
-        mCurrentTextField.setText(Integer.toHexString(mCurrentValue));
-        mCurrentTextField.setColorComponentValue(mCurrentValue);
+        currentTextField.setText(Integer.toHexString(mCurrentValue));
+        currentTextField.setColorComponentValue(mCurrentValue);
     }
 
     public void tapTitleButton(View v){
         if(getParent() instanceof ColorMakerView){
             ColorMakerView maker = (ColorMakerView)getParent();
-            maker.setInputMode(dec);
+            maker.setInputMode(hex);
         }
     }
 
@@ -122,30 +120,16 @@ public class RGBMakerView extends LinearLayout {
     }
 
     public void switchToNextTextField(){
-        mCurrentTextField.setIsFocusedOn(false);
-        if(mCurrentTextField == mFirstTextField){
-            mCurrentTextField = mSecondTextField;
+        currentTextField.setIsFocusedOn(false);
+        if(currentTextField == mFirstTextField){
+            currentTextField = mSecondTextField;
         }else{
-            if(mCurrentTextField == mSecondTextField){
-                mCurrentTextField = mThirdTextField;
+            if(currentTextField == mSecondTextField){
+                currentTextField = mThirdTextField;
             }else{
-                mCurrentTextField = mFirstTextField;
+                currentTextField = mFirstTextField;
             }
         }
-        mCurrentTextField.setIsFocusedOn(true);
+        currentTextField.setIsFocusedOn(true);
     }
-
-    public int getCurrentColor(){
-        if(GlobalValue.mColorStyle == ColorComponentsStyle.rgb){
-            return Color.rgb(mFirstTextField.getColorComponentValue(),
-                    mSecondTextField.getColorComponentValue(),
-                    mThirdTextField.getColorComponentValue());
-        }else{
-            float[] hsv = {mFirstTextField.getColorComponentValue(),
-                    mSecondTextField.getColorComponentValue(),
-                    mThirdTextField.getColorComponentValue()};
-            return Color.HSVToColor(hsv);
-        }
-    }
-
 }

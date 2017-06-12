@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.linshiwei.colorpicker.colormaker.RGBMakerView
+    <com.example.linshiwei.colorpicker.addcolor.colormaker.RGBMakerView
         android:layout_width="match_parent"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -12,17 +12,17 @@
 
 
 
-    </com.example.linshiwei.colorpicker.colormaker.RGBMakerView>
+    </com.example.linshiwei.colorpicker.addcolor.colormaker.RGBMakerView>
 
 
 
-    <com.example.linshiwei.colorpicker.colormaker.HEXMakerView
+    <com.example.linshiwei.colorpicker.addcolor.colormaker.HEXMakerView
         android:layout_width="match_parent"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_height="52dp"
         android:orientation="horizontal">
 
-    </com.example.linshiwei.colorpicker.colormaker.HEXMakerView>
+    </com.example.linshiwei.colorpicker.addcolor.colormaker.HEXMakerView>
 
 </LinearLayout>

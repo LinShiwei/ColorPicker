@@ -1,4 +1,4 @@
-package com.example.linshiwei.colorpicker.colormaker;
+package com.example.linshiwei.colorpicker.addcolor.colormaker;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
@@ -7,13 +7,14 @@ import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 
 import com.example.linshiwei.colorpicker.R;
+import com.example.linshiwei.colorpicker.addcolor.MakerInputMode;
 
 public class ColorMakerView extends LinearLayout {
 
     private RGBMakerView mRGBMakerView;
     private HEXMakerView mHEXMakerView;
 
-    private MakerInputMode inputMode;
+    private MakerInputMode mInputMode;
 
     public ColorMakerView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -22,11 +23,11 @@ public class ColorMakerView extends LinearLayout {
     }
 
     public MakerInputMode getInputMode(){
-        return inputMode;
+        return mInputMode;
     }
 
     public void setInputMode(MakerInputMode value){
-        inputMode = value;
+        mInputMode = value;
 
     }
 }

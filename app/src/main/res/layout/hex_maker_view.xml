@@ -10,7 +10,7 @@
         android:layout_weight="1"
         android:text="@string/button_HEX" />
 
-    <com.example.linshiwei.colorpicker.colormaker.MakerTextView
+    <com.example.linshiwei.colorpicker.addcolor.colormaker.MakerTextView
         android:id="@+id/textViewH"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -21,7 +21,7 @@
         android:layout_weight="1"
         android:text="@string/colorValueMax" />
 
-    <com.example.linshiwei.colorpicker.colormaker.MakerTextView
+    <com.example.linshiwei.colorpicker.addcolor.colormaker.MakerTextView
         android:id="@+id/textViewE"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -32,7 +32,7 @@
         android:layout_weight="1"
         android:text="@string/colorValueMax" />
 
-    <com.example.linshiwei.colorpicker.colormaker.MakerTextView
+    <com.example.linshiwei.colorpicker.addcolor.colormaker.MakerTextView
         android:id="@+id/textViewX"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"

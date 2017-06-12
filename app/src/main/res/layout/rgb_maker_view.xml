@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <Button
         android:id="@+id/buttonRGB"
@@ -9,7 +9,7 @@
         android:layout_weight="1"
         android:text="@string/button_RGB" />
 
-    <com.example.linshiwei.colorpicker.colormaker.MakerTextView
+    <com.example.linshiwei.colorpicker.addcolor.colormaker.MakerTextView
         android:id="@+id/textViewR"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -20,7 +20,7 @@
         android:layout_weight="1"
         android:text="@string/colorValueMax" />
 
-    <com.example.linshiwei.colorpicker.colormaker.MakerTextView
+    <com.example.linshiwei.colorpicker.addcolor.colormaker.MakerTextView
         android:id="@+id/textViewG"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -31,7 +31,7 @@
         android:layout_weight="1"
         android:text="@string/colorValueMax" />
 
-    <com.example.linshiwei.colorpicker.colormaker.MakerTextView
+    <com.example.linshiwei.colorpicker.addcolor.colormaker.MakerTextView
         android:id="@+id/textViewB"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"

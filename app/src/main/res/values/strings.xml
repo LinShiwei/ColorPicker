@@ -26,4 +26,6 @@
     <string name="button_F">F</string>
     <string name="button_Tab">Tab</string>
     <string name="button_Clear">AC</string>
+
+    <string name="hex_tag">hex</string>
 </resources>

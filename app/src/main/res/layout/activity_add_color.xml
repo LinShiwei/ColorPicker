@@ -15,184 +15,18 @@
         android:layout_marginRight="8dp"
         app:srcCompat="@android:color/holo_green_dark" />
 
-    <com.example.linshiwei.colorpicker.colormaker.ColorMakerView
+    <com.example.linshiwei.colorpicker.addcolor.colormaker.ColorMakerView
         android:layout_width="match_parent"
         android:layout_height="107dp"
         android:orientation="vertical">
-    </com.example.linshiwei.colorpicker.colormaker.ColorMakerView>
+    </com.example.linshiwei.colorpicker.addcolor.colormaker.ColorMakerView>
 
-    <LinearLayout
+    <com.example.linshiwei.colorpicker.addcolor.InputButtonContainerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"
         android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_7" />
-
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_8" />
-
-            <Button
-                android:id="@+id/button9"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_9" />
-
-            <Button
-                android:id="@+id/buttonA"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_A" />
-
-            <Button
-                android:id="@+id/buttonB"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_B" />
-
-            <Button
-                android:id="@+id/buttonC"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_C" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_4" />
-
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_5" />
-
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_6" />
-
-            <Button
-                android:id="@+id/buttonD"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_D" />
-
-            <Button
-                android:id="@+id/buttonE"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_E" />
-
-            <Button
-                android:id="@+id/buttonF"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_F" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_1" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_2" />
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_3" />
-
-            <Button
-                android:id="@+id/button0"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_0" />
-
-            <Button
-                android:id="@+id/buttonTab"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_Tab" />
-
-            <Button
-                android:id="@+id/buttonClear"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickNumberButton"
-                android:text="@string/button_Clear" />
-        </LinearLayout>
-    </LinearLayout>
+    </com.example.linshiwei.colorpicker.addcolor.InputButtonContainerView>
 
 
 </LinearLayout>
