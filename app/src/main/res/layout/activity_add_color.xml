@@ -5,15 +5,14 @@
     android:layout_height="match_parent"
     android:weightSum="1" android:id="@+id/root_layout">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <View
+        android:id="@+id/color_indication_view"
         android:layout_height="200dp"
         android:layout_width="match_parent"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:srcCompat="@android:color/holo_green_dark" />
+        android:layout_marginRight="8dp"/>
 
     <com.example.linshiwei.colorpicker.addcolor.colormaker.ColorMakerView
         android:layout_width="match_parent"

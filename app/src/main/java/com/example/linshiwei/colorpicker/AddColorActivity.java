@@ -26,7 +26,7 @@ import static java.security.AccessController.getContext;
 public class AddColorActivity extends AppCompatActivity {
     private static final String TAG = "AddColorActivity";
 
-    private ImageView mColorIndicationView;
+    private View mColorIndicationView;
     private ColorMakerView mColorMakerView;
     private InputButtonContainerView mInputButtonContainerView;
 
@@ -37,7 +37,7 @@ public class AddColorActivity extends AppCompatActivity {
 
         LinearLayout layout = (LinearLayout) findViewById(R.id.root_layout);
         mColorMakerView = (ColorMakerView) layout.findViewById(R.id.color_maker_view);
-
+        mColorIndicationView = layout.findViewById(R.id.color_indication_view);
 //        mColorMakerView =
     }
 
@@ -82,6 +82,7 @@ public class AddColorActivity extends AppCompatActivity {
             case "E":
             case "F":
                 mColorMakerView.inputOneNumber(inputString);
+                mColorIndicationView.setBackgroundColor(mColorMakerView.getCurrentColor());
                 break;
             case "AC":
                 mColorMakerView.clearAllTextFields();
@@ -93,6 +94,6 @@ public class AddColorActivity extends AppCompatActivity {
     }
 
     public void saveCurrentColor(View v){
-        //
+        //待完善
     }
 }
