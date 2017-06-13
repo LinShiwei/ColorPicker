@@ -7,6 +7,7 @@ import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewParent;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
@@ -107,8 +108,9 @@ public class HEXMakerView extends LinearLayout {
     }
 
     public void tapTitleButton(View v){
-        if(getParent() instanceof ColorMakerView){
-            ColorMakerView maker = (ColorMakerView)getParent();
+        ViewParent vv = getParent().getParent();
+        if(vv instanceof ColorMakerView){
+            ColorMakerView maker = (ColorMakerView)vv;
             maker.setInputMode(hex);
         }
     }

@@ -12,7 +12,6 @@ import android.widget.LinearLayout;
 import com.example.linshiwei.colorpicker.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by linshiwei on 2017/6/12.
@@ -33,14 +32,15 @@ public class InputButtonContainerView extends LinearLayout {
         hexButtons = findButtonWithTagRecursively(this,R.string.hex_tag);
         //待完善
 
-
+        mInputMode = MakerInputMode.dec;
     }
 
     public MakerInputMode getInputMode(){
         return mInputMode;
     }
 
-    public void setInputMode(){
+    public void setInputMode(MakerInputMode value){
+        mInputMode = value;
         switch (mInputMode){
             case dec:
                 for (Button btn:hexButtons) {

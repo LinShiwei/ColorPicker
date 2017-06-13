@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1" android:id="@+id/root_layout">
 
     <ImageView
         android:id="@+id/imageView"
@@ -18,7 +18,8 @@
     <com.example.linshiwei.colorpicker.addcolor.colormaker.ColorMakerView
         android:layout_width="match_parent"
         android:layout_height="107dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:id="@+id/color_maker_view">
     </com.example.linshiwei.colorpicker.addcolor.colormaker.ColorMakerView>
 
     <com.example.linshiwei.colorpicker.addcolor.InputButtonContainerView
