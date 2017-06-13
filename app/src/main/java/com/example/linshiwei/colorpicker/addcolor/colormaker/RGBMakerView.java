@@ -54,10 +54,6 @@ public class RGBMakerView extends LinearLayout {
             }
         });
 
-        mFirstTextField.focusedBackgroundColor = Color.WHITE;
-        mSecondTextField.focusedBackgroundColor = Color.WHITE;
-        mThirdTextField.focusedBackgroundColor = Color.WHITE;
-
         currentTextField = mFirstTextField;
         currentTextField.setIsFocusedOn(true);
 

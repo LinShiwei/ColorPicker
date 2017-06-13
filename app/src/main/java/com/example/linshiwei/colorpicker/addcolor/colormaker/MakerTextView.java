@@ -26,9 +26,8 @@ public class MakerTextView extends AppCompatTextView {
     }
 
     public void setColorComponentValue(int value){
-        int old = mColorComponentValue;
         mColorComponentValue = value;
-        setHint(String.valueOf(mColorComponentValue));
+        setHint(getText());
     }
 
     public int getColorComponentValue(){
