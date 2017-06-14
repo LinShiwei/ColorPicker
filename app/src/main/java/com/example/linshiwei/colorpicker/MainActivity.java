@@ -1,7 +1,9 @@
 package com.example.linshiwei.colorpicker;
 
-import android.content.Context;
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,11 +13,16 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import java.util.ArrayList;
+import com.example.linshiwei.colorpicker.datasource.ColorCollectionDbHelper;
+import com.example.linshiwei.colorpicker.datasource.ColorCollectionSourceManager;
+import com.example.linshiwei.colorpicker.datasource.ColorCollector;
+import com.example.linshiwei.colorpicker.datasource.DataCallBack;
+import com.example.linshiwei.colorpicker.datasource.FinishCallBack;
 
-import static android.R.attr.bottomLeftRadius;
-import static android.R.attr.cacheColorHint;
-import static android.R.attr.tag;
+import java.util.ArrayList;
+import java.util.List;
+
+
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -25,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> mTitleList;
 
     private RecyclerAdapter mRecycleViewAdapter;
+    private ColorCollectionDbHelper mDbHelper;
+    private ColorCollectionSourceManager manager = ColorCollectionSourceManager.INSTANCE;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
 
         mRecycleViewAdapter = new RecyclerAdapter(mTitleList);
         mRecyclerView.setAdapter(mRecycleViewAdapter);
+
+        mDbHelper = new ColorCollectionDbHelper(this);
 
     }
 
@@ -67,16 +79,34 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.add_button:
                 Log.i(TAG,"addbuttonTap");
-//                mTitleList.add("new");
-//                Log.i(TAG,"" + mTitleList.size());
-//                mRecycleViewAdapter.notifyDataSetChanged();
-                Intent intent = new Intent(this,AddColorActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.animator.enter,R.animator.exit);
+
+//                Intent intent = new Intent(this,AddColorActivity.class);
+//                startActivity(intent);
+//                overridePendingTransition(R.animator.enter,R.animator.exit);
+
+                manager.getAllCollectedColor(mDbHelper,new DataCallBack() {
+                    @Override
+                    public void onGetData(Boolean success, ArrayList<Integer> colorInts) {
+                        if (success){
+                            List a = colorInts;
+                            int c= 3;
+                        }
+                    }
+                });
+
                 break;
             case R.id.pick_button:
                 Log.i(TAG,"pickbuttonTap");
-
+                manager.saveOneColor(mDbHelper, 666, new FinishCallBack() {
+                    @Override
+                    public void onFinish(Boolean success) {
+                        if (success){
+                            ;
+                        }else{
+                            ;
+                        }
+                    }
+                });
                 break;
         }
         return true;
