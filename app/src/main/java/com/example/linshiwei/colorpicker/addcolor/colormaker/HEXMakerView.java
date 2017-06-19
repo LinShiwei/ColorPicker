@@ -60,7 +60,7 @@ public class HEXMakerView extends LinearLayout {
 
         currentTextField = mFirstTextField;
 
-        if(GlobalValue.mColorStyle == ColorComponentsStyle.hsv){
+        if(GlobalValue.colorStyle == ColorComponentsStyle.hsv){
             mFirstTextField.setColorComponentValue(0);
             mSecondTextField.setColorComponentValue(0);
 

@@ -46,7 +46,7 @@ public class RGBMakerView extends LinearLayout {
         mSecondTextField = (MakerTextView)findViewById(R.id.textViewE);
         mThirdTextField = (MakerTextView)findViewById(R.id.textViewX);
 
-        mTitleButton.setText(GlobalValue.mColorStyle == ColorComponentsStyle.rgb ? "RGB" : "HSV");
+        mTitleButton.setText(GlobalValue.colorStyle == ColorComponentsStyle.rgb ? "RGB" : "HSV");
         mTitleButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -57,7 +57,7 @@ public class RGBMakerView extends LinearLayout {
         currentTextField = mFirstTextField;
         currentTextField.setIsFocusedOn(true);
 
-        if(GlobalValue.mColorStyle == ColorComponentsStyle.hsv){
+        if(GlobalValue.colorStyle == ColorComponentsStyle.hsv){
             mFirstTextField.setColorComponentValue(0);
             mSecondTextField.setColorComponentValue(0);
 
@@ -134,7 +134,7 @@ public class RGBMakerView extends LinearLayout {
     }
 
     public int getCurrentColor(){
-        if(GlobalValue.mColorStyle == ColorComponentsStyle.rgb){
+        if(GlobalValue.colorStyle == ColorComponentsStyle.rgb){
             return Color.rgb(mFirstTextField.getColorComponentValue(),
                     mSecondTextField.getColorComponentValue(),
                     mThirdTextField.getColorComponentValue());

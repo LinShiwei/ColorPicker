@@ -103,10 +103,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.rgb_hsv_button:
                 if (item.getTitle() == "RGB"){
                     item.setTitle("HSV");
-                    GlobalValue.mColorStyle = ColorComponentsStyle.hsv;
+                    GlobalValue.colorStyle = ColorComponentsStyle.hsv;
                 }else{
                     item.setTitle("RGB");
-                    GlobalValue.mColorStyle = ColorComponentsStyle.rgb;
+                    GlobalValue.colorStyle = ColorComponentsStyle.rgb;
                 }
                 //待完善
                 break;

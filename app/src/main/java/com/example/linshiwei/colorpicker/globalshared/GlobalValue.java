@@ -5,6 +5,6 @@ package com.example.linshiwei.colorpicker.globalshared;
  */
 
 public class GlobalValue {
-    public static ColorComponentsStyle mColorStyle = ColorComponentsStyle.rgb;
+    public static ColorComponentsStyle colorStyle = ColorComponentsStyle.rgb;
 
 }
