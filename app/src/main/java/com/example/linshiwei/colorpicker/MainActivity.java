@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.example.linshiwei.colorpicker.datasource.CollectedColor;
 import com.example.linshiwei.colorpicker.datasource.ColorCollectionDbHelper;
 import com.example.linshiwei.colorpicker.datasource.ColorCollectionSourceManager;
 import com.example.linshiwei.colorpicker.datasource.ColorCollector;
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.rgb_hsv,menu);
         inflater.inflate(R.menu.add,menu);
         inflater.inflate(R.menu.pick,menu);
         return true;
@@ -80,36 +82,42 @@ public class MainActivity extends AppCompatActivity {
             case R.id.add_button:
                 Log.i(TAG,"addbuttonTap");
 
-//                Intent intent = new Intent(this,AddColorActivity.class);
-//                startActivity(intent);
-//                overridePendingTransition(R.animator.enter,R.animator.exit);
+                Intent intent = new Intent(this,AddColorActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.animator.enter,R.animator.exit);
 
-                manager.getAllCollectedColor(mDbHelper,new DataCallBack() {
-                    @Override
-                    public void onGetData(Boolean success, ArrayList<Integer> colorInts) {
-                        if (success){
-                            List a = colorInts;
-                            int c= 3;
-                        }
-                    }
-                });
+
 
                 break;
             case R.id.pick_button:
                 Log.i(TAG,"pickbuttonTap");
-                manager.saveOneColor(mDbHelper, 666, new FinishCallBack() {
+                manager.getAllCollectedColor(mDbHelper,new DataCallBack() {
                     @Override
-                    public void onFinish(Boolean success) {
+                    public void onGetData(Boolean success, ArrayList<CollectedColor> colors) {
                         if (success){
-                            ;
-                        }else{
-                            ;
+                            List a = colors;
+                            int c= 3;
                         }
                     }
                 });
                 break;
+            case R.id.rgb_hsv_button:
+                if (item.getTitle() == "RGB"){
+                    item.setTitle("HSV");
+                    GlobalValue.mColorStyle = ColorComponentsStyle.hsv;
+                }else{
+                    item.setTitle("RGB");
+                    GlobalValue.mColorStyle = ColorComponentsStyle.rgb;
+                }
+                //待完善
+                break;
         }
         return true;
     }
+
+
+
+
+
 }
 

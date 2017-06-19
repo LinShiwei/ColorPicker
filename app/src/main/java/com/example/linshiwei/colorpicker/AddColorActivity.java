@@ -8,6 +8,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -16,6 +19,15 @@ import android.widget.LinearLayout;
 
 import com.example.linshiwei.colorpicker.addcolor.InputButtonContainerView;
 import com.example.linshiwei.colorpicker.addcolor.colormaker.ColorMakerView;
+import com.example.linshiwei.colorpicker.datasource.CollectedColor;
+import com.example.linshiwei.colorpicker.datasource.ColorCollectionDbHelper;
+import com.example.linshiwei.colorpicker.datasource.ColorCollectionSourceManager;
+import com.example.linshiwei.colorpicker.datasource.DataCallBack;
+import com.example.linshiwei.colorpicker.datasource.FinishCallBack;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
 
 import static java.security.AccessController.getContext;
 
@@ -30,6 +42,8 @@ public class AddColorActivity extends AppCompatActivity {
     private ColorMakerView mColorMakerView;
     private InputButtonContainerView mInputButtonContainerView;
 
+    private ColorCollectionDbHelper mDbHelper;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +53,25 @@ public class AddColorActivity extends AppCompatActivity {
         mColorMakerView = (ColorMakerView) layout.findViewById(R.id.color_maker_view);
         mColorIndicationView = layout.findViewById(R.id.color_indication_view);
 //        mColorMakerView =
+
+        mDbHelper = new ColorCollectionDbHelper(this);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.save,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.save_button:
+                Log.i(TAG,"savebuttonTap");
+                saveCurrentColor(item);
+                break;
+        }
+        return true;
     }
 
     @Override
@@ -93,7 +126,18 @@ public class AddColorActivity extends AppCompatActivity {
         }
     }
 
-    public void saveCurrentColor(View v){
+    public void saveCurrentColor(MenuItem item){
         //待完善
+        ColorCollectionSourceManager.INSTANCE.saveOneColor(mDbHelper, mColorMakerView.getCurrentColor(), new FinishCallBack() {
+            @Override
+            public void onFinish(Boolean success) {
+                if (success){
+                    Log.i(TAG,"Save success");
+                }else{
+                    Log.i(TAG,"Save fail");
+                }
+            }
+        });
+
     }
 }

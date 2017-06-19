@@ -4,12 +4,14 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.linshiwei.colorpicker.MainActivity;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
+import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by linshiwei on 2017/6/14.
@@ -48,13 +50,15 @@ public enum ColorCollectionSourceManager {
                 sortOrder                                 // The sort order
         );
 
-        ArrayList<Integer> colors = new ArrayList<>();
+        ArrayList<CollectedColor> colors = new ArrayList<>();
         while(cursor.moveToNext()) {
 
             int index = cursor.getColumnIndexOrThrow(ColorCollector.ColorElement.COLOR_INT);
-
             int color = cursor.getInt(index);
-            colors.add(color);
+
+            int dateIndex = cursor.getColumnIndexOrThrow(ColorCollector.ColorElement.DESCRIPTION);
+            Date date = getDateFromString(cursor.getString(dateIndex));
+            colors.add(new CollectedColor(color,date));
 
 
         }
@@ -62,14 +66,14 @@ public enum ColorCollectionSourceManager {
         callBack.onGetData(true,colors);
     }
 
-    public void saveOneColor(ColorCollectionDbHelper dbHelper, int color, FinishCallBack callBack){
+    public void saveOneColor(ColorCollectionDbHelper dbHelper, CollectedColor color, FinishCallBack callBack){
         Calendar c = Calendar.getInstance();
         System.out.println("Current time => " + c.getTime());
 
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(ColorCollector.ColorElement.DESCRIPTION,Calendar.getInstance().getTime().toString());
-        values.put(ColorCollector.ColorElement.COLOR_INT,color);
+        values.put(ColorCollector.ColorElement.DESCRIPTION,getStringFromDate(color.mAddingDate));
+        values.put(ColorCollector.ColorElement.COLOR_INT,color.mColor);
         long newID = db.insert(ColorCollector.ColorElement.TABLE_NAME,null,values);
         if(newID == -1){
             callBack.onFinish(false);
@@ -77,4 +81,29 @@ public enum ColorCollectionSourceManager {
             callBack.onFinish(true);
         }
     }
+
+    public void saveOneColor(ColorCollectionDbHelper dbHelper,Integer colorInt,FinishCallBack callBack){
+
+        CollectedColor color = new CollectedColor(colorInt,Calendar.getInstance().getTime());
+        saveOneColor(dbHelper,color,callBack);
+    }
+
+    private String getStringFromDate(Date date){
+        SimpleDateFormat dateFormat = new SimpleDateFormat(
+                "yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+        return dateFormat.format(date);
+    }
+
+    private Date getDateFromString(String str){
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+        Date date;
+        try {
+            date = dateFormat.parse(str);
+            return date;
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return Calendar.getInstance().getTime();
+        }
+    }
+
 }
