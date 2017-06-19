@@ -11,8 +11,8 @@ import android.view.ViewParent;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.example.linshiwei.colorpicker.ColorComponentsStyle;
-import com.example.linshiwei.colorpicker.GlobalValue;
+import com.example.linshiwei.colorpicker.globalshared.ColorComponentsStyle;
+import com.example.linshiwei.colorpicker.globalshared.GlobalValue;
 import com.example.linshiwei.colorpicker.R;
 import com.example.linshiwei.colorpicker.addcolor.MakerInputMode;
 

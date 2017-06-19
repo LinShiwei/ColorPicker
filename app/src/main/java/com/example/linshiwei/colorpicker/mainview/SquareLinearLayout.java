@@ -1,4 +1,4 @@
-package com.example.linshiwei.colorpicker;
+package com.example.linshiwei.colorpicker.mainview;
 
 import android.content.Context;
 import android.util.AttributeSet;

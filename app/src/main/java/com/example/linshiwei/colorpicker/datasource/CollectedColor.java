@@ -7,11 +7,11 @@ import java.util.Date;
  */
 
 public class CollectedColor {
-    public int mColor;
-    public Date mAddingDate;
+    public int color;
+    public Date addingDate;
 
     public CollectedColor(int color,Date addingDate){
-        mColor = color;
-        mAddingDate = addingDate;
+        this.color = color;
+        this.addingDate = addingDate;
     }
 }

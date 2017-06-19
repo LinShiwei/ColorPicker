@@ -72,8 +72,8 @@ public enum ColorCollectionSourceManager {
 
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(ColorCollector.ColorElement.DESCRIPTION,getStringFromDate(color.mAddingDate));
-        values.put(ColorCollector.ColorElement.COLOR_INT,color.mColor);
+        values.put(ColorCollector.ColorElement.DESCRIPTION,getStringFromDate(color.addingDate));
+        values.put(ColorCollector.ColorElement.COLOR_INT,color.color);
         long newID = db.insert(ColorCollector.ColorElement.TABLE_NAME,null,values);
         if(newID == -1){
             callBack.onFinish(false);

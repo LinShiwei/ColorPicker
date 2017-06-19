@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<com.example.linshiwei.colorpicker.mainview.ColorInformationView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
@@ -8,36 +8,5 @@
     android:gravity="center"
 
     >
-    <com.example.linshiwei.colorpicker.SquareLinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
 
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            />
-    </com.example.linshiwei.colorpicker.SquareLinearLayout>
-
-
-    <TextView
-        android:id="@+id/item_description"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_weight="1"
-        android:ellipsize="end"
-        android:maxLines="5"
-        android:text="Some text"
-        android:background="@drawable/back"
-        />
-
-</LinearLayout>
+</com.example.linshiwei.colorpicker.mainview.ColorInformationView>

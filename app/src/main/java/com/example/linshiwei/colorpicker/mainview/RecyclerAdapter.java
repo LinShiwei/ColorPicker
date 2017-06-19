@@ -1,12 +1,13 @@
-package com.example.linshiwei.colorpicker;
+package com.example.linshiwei.colorpicker.mainview;
 
-import android.support.v4.widget.TextViewCompat;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.linshiwei.colorpicker.R;
 
 import java.util.ArrayList;
 
@@ -25,7 +26,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemHo
 
         public ItemHolder(View itemView) {
             super(itemView);
-            mTitleView = (TextView) itemView.findViewById(R.id.item_description);
+//            mTitleView = (TextView) itemView.findViewById(R.id.item_description);
         }
 
         public void bindTitle(String text){
@@ -49,8 +50,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemHo
 
     @Override
     public void onBindViewHolder(RecyclerAdapter.ItemHolder holder, int position) {
-        String titleText = mTitles.get(position);
-        holder.bindTitle(titleText);
+//        String titleText = mTitles.get(position);
+//        holder.bindTitle(titleText);
     }
 
     @Override

@@ -1,9 +1,6 @@
-package com.example.linshiwei.colorpicker;
+package com.example.linshiwei.colorpicker.activity;
 
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,12 +10,14 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.example.linshiwei.colorpicker.globalshared.ColorComponentsStyle;
+import com.example.linshiwei.colorpicker.globalshared.GlobalValue;
+import com.example.linshiwei.colorpicker.R;
+import com.example.linshiwei.colorpicker.mainview.RecyclerAdapter;
 import com.example.linshiwei.colorpicker.datasource.CollectedColor;
 import com.example.linshiwei.colorpicker.datasource.ColorCollectionDbHelper;
 import com.example.linshiwei.colorpicker.datasource.ColorCollectionSourceManager;
-import com.example.linshiwei.colorpicker.datasource.ColorCollector;
 import com.example.linshiwei.colorpicker.datasource.DataCallBack;
-import com.example.linshiwei.colorpicker.datasource.FinishCallBack;
 
 import java.util.ArrayList;
 import java.util.List;
