@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.linshiwei.colorpicker.R;
+import com.example.linshiwei.colorpicker.datasource.CollectedColor;
 
 import java.util.ArrayList;
 
@@ -18,25 +19,25 @@ import java.util.ArrayList;
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemHolder> {
     private static final String TAG = "RecyclerAdapter";
 
-    private ArrayList<String> mTitles;
+    private ArrayList<CollectedColor> mColors;
 
     public class ItemHolder extends RecyclerView.ViewHolder {
 
-        private TextView mTitleView;
+        private ColorInformationView mColorInformationView;
 
         public ItemHolder(View itemView) {
             super(itemView);
-//            mTitleView = (TextView) itemView.findViewById(R.id.item_description);
+            mColorInformationView = (ColorInformationView) itemView.findViewById(R.id.color_information_view);
         }
 
-        public void bindTitle(String text){
-            mTitleView.setText(text);
+        public void bindCurrentColor(int color){
+            mColorInformationView.setCurrentColor(color);
         }
     }
 
 
-    public RecyclerAdapter(ArrayList<String> titles) {
-        mTitles = titles;
+    public RecyclerAdapter(ArrayList<CollectedColor> colors) {
+        mColors = colors;
     }
 
     @Override
@@ -50,13 +51,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemHo
 
     @Override
     public void onBindViewHolder(RecyclerAdapter.ItemHolder holder, int position) {
-//        String titleText = mTitles.get(position);
-//        holder.bindTitle(titleText);
+        int color = mColors.get(position).color;
+        holder.bindCurrentColor(color);
     }
 
     @Override
     public int getItemCount() {
-        Log.d(TAG, "getItemCount: " + mTitles.size());
-        return mTitles.size();
+        Log.d(TAG, "getItemCount: " + mColors.size());
+        return mColors.size();
     }
 }

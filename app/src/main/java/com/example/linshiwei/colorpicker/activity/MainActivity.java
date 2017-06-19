@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private LinearLayoutManager mLinearLayoutManager;
 
-    private ArrayList<String> mTitleList;
+    private ArrayList<CollectedColor> mColors;
 
     private RecyclerAdapter mRecycleViewAdapter;
     private ColorCollectionDbHelper mDbHelper;
@@ -45,24 +45,31 @@ public class MainActivity extends AppCompatActivity {
         mLinearLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLinearLayoutManager);
 
-        mTitleList = new ArrayList<>();
+        mColors = new ArrayList<>();
 
-        mRecycleViewAdapter = new RecyclerAdapter(mTitleList);
+        mRecycleViewAdapter = new RecyclerAdapter(mColors);
         mRecyclerView.setAdapter(mRecycleViewAdapter);
 
         mDbHelper = new ColorCollectionDbHelper(this);
-
     }
-
 
     @Override
     protected void onStart() {
         super.onStart();
-        if (mTitleList.size() == 0){
-            for (int i=0;i<20;i++){
-                mTitleList.add(Integer.toString(i));
-            }
+        if (mColors.size() == 0){
+//            for (int i=0;i<20;i++){
+//                mColors.add(Integer.toString(i));
+//            }
 //            mRecycleViewAdapter.notifyDataSetChanged();
+
+            manager.getAllCollectedColor(mDbHelper, new DataCallBack() {
+                @Override
+                public void onGetData(Boolean success, ArrayList<CollectedColor> colors) {
+                    if (success){
+                        mColors = colors;
+                    }
+                }
+            });
         }
     }
 

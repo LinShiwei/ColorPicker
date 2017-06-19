@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public interface DataCallBack {
 
-    void onGetData(Boolean success, ArrayList<CollectedColor> colorInts);
+    void onGetData(Boolean success, ArrayList<CollectedColor> colors);
 
 }
 
