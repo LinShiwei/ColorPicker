@@ -44,6 +44,10 @@ public class ColorInformationView extends LinearLayout {
         mColorComponentsContainerView.updateColorValue();
     }
 
+    public void refreshColor(){
+        setCurrentColor(mCurrentColor);
+    }
+
     public int getCurrentColor() {
         return mCurrentColor;
     }

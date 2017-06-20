@@ -9,10 +9,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.linshiwei.colorpicker.globalshared.ColorComponentsStyle;
 import com.example.linshiwei.colorpicker.globalshared.GlobalValue;
 import com.example.linshiwei.colorpicker.R;
+import com.example.linshiwei.colorpicker.mainview.ColorInformationView;
 import com.example.linshiwei.colorpicker.mainview.RecyclerAdapter;
 import com.example.linshiwei.colorpicker.datasource.CollectedColor;
 import com.example.linshiwei.colorpicker.datasource.ColorCollectionDbHelper;
@@ -119,9 +121,21 @@ public class MainActivity extends AppCompatActivity {
             GlobalValue.colorStyle = ColorComponentsStyle.rgb;
         }
         //待完善
+        updateColorValue();
+
     }
 
-
+    private void updateColorValue(){
+        LinearLayoutManager linearLayoutManager = (LinearLayoutManager) mRecyclerView.getLayoutManager();
+        int iFirst = linearLayoutManager.findFirstVisibleItemPosition();
+        int iLast = linearLayoutManager.findLastVisibleItemPosition();
+        for (int i = iFirst;i<=iLast;i++){
+            View v = mRecyclerView.getChildAt(i);
+            if (v instanceof ColorInformationView){
+                ((ColorInformationView) v).refreshColor();
+            }
+        }
+    }
 
 }
 
