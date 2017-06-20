@@ -49,9 +49,9 @@ public class ColorComponentView extends LinearLayout {
 
     public void setValue(float value){
         this.value = value;
-        mNormalizedValueLabel.setText(String.format(Locale.US, "%.2f", value));
-        mDecValueLabel.setText(String.valueOf(Math.round(255 * value)));
-        mHexValueLabel.setText(Integer.toHexString(Math.round(255 * value)));
+        mNormalizedValueLabel.setText(String.format(Locale.US, "%.2f", value/255.0));
+        mDecValueLabel.setText(String.valueOf(Math.round(value)));
+        mHexValueLabel.setText(Integer.toHexString(Math.round(value)).toUpperCase());
     }
 
     public float getValue(){

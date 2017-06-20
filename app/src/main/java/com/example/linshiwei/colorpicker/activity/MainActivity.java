@@ -54,23 +54,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-        if (mColors.size() == 0){
-//            for (int i=0;i<20;i++){
-//                mColors.add(Integer.toString(i));
-//            }
-//            mRecycleViewAdapter.notifyDataSetChanged();
+    protected void onResume() {
+        super.onResume();
 
-            manager.getAllCollectedColor(mDbHelper, new DataCallBack() {
-                @Override
-                public void onGetData(Boolean success, ArrayList<CollectedColor> colors) {
-                    if (success){
-                        mColors = colors;
-                    }
+        manager.getAllCollectedColor(mDbHelper, new DataCallBack() {
+            @Override
+            public void onGetData(Boolean success, ArrayList<CollectedColor> colors) {
+                if (success&&colors != null){
+                    mColors.clear();
+                    mColors.addAll(colors);
+                    mRecycleViewAdapter.notifyDataSetChanged();
                 }
-            });
-        }
+            }
+        });
     }
 
     @Override
@@ -108,20 +104,22 @@ public class MainActivity extends AppCompatActivity {
                 });
                 break;
             case R.id.rgb_hsv_button:
-                if (item.getTitle() == "RGB"){
-                    item.setTitle("HSV");
-                    GlobalValue.colorStyle = ColorComponentsStyle.hsv;
-                }else{
-                    item.setTitle("RGB");
-                    GlobalValue.colorStyle = ColorComponentsStyle.rgb;
-                }
-                //待完善
+                tapToChangeColorStyle(item);
                 break;
         }
         return true;
     }
 
-
+    private void tapToChangeColorStyle(MenuItem item){
+        if (item.getTitle() == "RGB"){
+            item.setTitle("HSV");
+            GlobalValue.colorStyle = ColorComponentsStyle.hsv;
+        }else{
+            item.setTitle("RGB");
+            GlobalValue.colorStyle = ColorComponentsStyle.rgb;
+        }
+        //待完善
+    }
 
 
 

@@ -103,7 +103,7 @@ public class HEXMakerView extends LinearLayout {
 
     public void setCurrentValue(int value){
         mCurrentValue = value;
-        currentTextField.setText(Integer.toHexString(mCurrentValue));
+        currentTextField.setText(Integer.toHexString(mCurrentValue).toUpperCase());
         currentTextField.setColorComponentValue(mCurrentValue);
     }
 
