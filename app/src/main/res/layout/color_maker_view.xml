@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.linshiwei.colorpicker.addcolor.colormaker.RGBMakerView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        android:id="@+id/rgb_maker_view">
+
+
+
+    </com.example.linshiwei.colorpicker.addcolor.colormaker.RGBMakerView>
+
+
+
+    <com.example.linshiwei.colorpicker.addcolor.colormaker.HEXMakerView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:id="@+id/hex_maker_view">
+
+    </com.example.linshiwei.colorpicker.addcolor.colormaker.HEXMakerView>
+
+</LinearLayout>
