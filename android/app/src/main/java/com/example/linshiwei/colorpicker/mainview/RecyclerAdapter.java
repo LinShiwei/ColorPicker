@@ -5,10 +5,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.TextView;
 
 import com.example.linshiwei.colorpicker.R;
 import com.example.linshiwei.colorpicker.datasource.CollectedColor;
+import com.example.linshiwei.colorpicker.globalshared.OnItemClickListener;
 
 import java.util.ArrayList;
 
@@ -21,13 +23,24 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemHo
 
     private ArrayList<CollectedColor> mColors;
 
-    public class ItemHolder extends RecyclerView.ViewHolder {
+    private OnItemClickListener mOnItemClickListener;
+
+    public class ItemHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private ColorInformationView mColorInformationView;
+        public OnItemClickListener mListener;
 
         public ItemHolder(View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
             mColorInformationView = (ColorInformationView) itemView.findViewById(R.id.color_information_view);
+        }
+
+        @Override
+        public void onClick(View v) {
+            if (mListener != null){
+                mListener.onItemClick(getAdapterPosition());
+            }
         }
 
         public void bindCurrentColor(int color){
@@ -45,8 +58,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemHo
 
         View inflatedView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recycleview_item_row,parent,false);
-
-        return new ItemHolder(inflatedView);
+        ItemHolder holder = new ItemHolder(inflatedView);
+        holder.mListener = mOnItemClickListener;
+        return holder;
     }
 
     @Override
@@ -59,5 +73,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemHo
     public int getItemCount() {
         Log.d(TAG, "getItemCount: " + mColors.size());
         return mColors.size();
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener){
+        this.mOnItemClickListener = onItemClickListener;
     }
 }

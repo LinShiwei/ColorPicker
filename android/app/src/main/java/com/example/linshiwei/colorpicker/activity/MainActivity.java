@@ -1,5 +1,6 @@
 package com.example.linshiwei.colorpicker.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,11 +11,13 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.linshiwei.colorpicker.globalshared.ColorComponentsStyle;
 import com.example.linshiwei.colorpicker.globalshared.GlobalValue;
 import com.example.linshiwei.colorpicker.R;
 import com.example.linshiwei.colorpicker.globalshared.ListViewDecoration;
+import com.example.linshiwei.colorpicker.globalshared.OnItemClickListener;
 import com.example.linshiwei.colorpicker.mainview.ColorInformationView;
 import com.example.linshiwei.colorpicker.mainview.RecyclerAdapter;
 import com.example.linshiwei.colorpicker.datasource.CollectedColor;
@@ -29,6 +32,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
+    private Activity mContext;
     private RecyclerView mRecyclerView;
     private LinearLayoutManager mLinearLayoutManager;
 
@@ -44,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mContext = this;
+
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         mLinearLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLinearLayoutManager);
@@ -52,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         mColors = new ArrayList<>();
 
         mRecycleViewAdapter = new RecyclerAdapter(mColors);
+        mRecycleViewAdapter.setOnItemClickListener(mOnItemClickListener);
         mRecyclerView.setAdapter(mRecycleViewAdapter);
 
         mDbHelper = new ColorCollectionDbHelper(this);
@@ -113,6 +120,13 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
+
+    private OnItemClickListener mOnItemClickListener = new OnItemClickListener() {
+        @Override
+        public void onItemClick(int position) {
+            Toast.makeText(mContext,Integer.toString(position),Toast.LENGTH_SHORT).show();
+        }
+    };
 
     private void tapToChangeColorStyle(MenuItem item){
         if (item.getTitle() == "RGB"){
