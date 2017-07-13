@@ -3,12 +3,12 @@
 *.xcbkptlist
 
 *.xcuserstate
-*.iml
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
+android/*.iml
+android/.gradle
+android/local.properties
+android/.idea/workspace.xml
+android/.idea/libraries
 .DS_Store
-/build
-/captures
-.externalNativeBuild
+android/build
+android/captures
+android/.externalNativeBuild
