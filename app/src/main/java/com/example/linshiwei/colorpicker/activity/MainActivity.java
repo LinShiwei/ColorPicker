@@ -14,6 +14,7 @@ import android.view.View;
 import com.example.linshiwei.colorpicker.globalshared.ColorComponentsStyle;
 import com.example.linshiwei.colorpicker.globalshared.GlobalValue;
 import com.example.linshiwei.colorpicker.R;
+import com.example.linshiwei.colorpicker.globalshared.ListViewDecoration;
 import com.example.linshiwei.colorpicker.mainview.ColorInformationView;
 import com.example.linshiwei.colorpicker.mainview.RecyclerAdapter;
 import com.example.linshiwei.colorpicker.datasource.CollectedColor;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         mLinearLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLinearLayoutManager);
+        mRecyclerView.addItemDecoration(new ListViewDecoration());
 
         mColors = new ArrayList<>();
 
