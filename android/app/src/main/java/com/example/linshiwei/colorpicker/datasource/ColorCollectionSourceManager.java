@@ -88,6 +88,17 @@ public enum ColorCollectionSourceManager {
         saveOneColor(dbHelper,color,callBack);
     }
 
+    public void deleteOneColor(ColorCollectionDbHelper dbHelper, CollectedColor color, FinishCallBack callBack) {
+        String selection = ColorCollector.ColorElement.DESCRIPTION + " LIKE ?";
+        String[] selectionArgs = { getStringFromDate(color.addingDate) };
+        int numberOfRows = dbHelper.getWritableDatabase().delete(ColorCollector.ColorElement.TABLE_NAME, selection, selectionArgs);
+        if (numberOfRows == 1){
+            callBack.onFinish(true);
+        }else{
+            callBack.onFinish(false);
+        }
+    }
+
     private String getStringFromDate(Date date){
         SimpleDateFormat dateFormat = new SimpleDateFormat(
                 "yyyy-MM-dd HH:mm:ss", Locale.getDefault());

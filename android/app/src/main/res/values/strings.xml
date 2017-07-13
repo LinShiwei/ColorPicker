@@ -28,4 +28,6 @@
     <string name="button_Clear">AC</string>
 
     <string name="hex_tag">hex</string>
+
+    <string name="color_info_view">COlORINFO</string>
 </resources>

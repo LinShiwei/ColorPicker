@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.linshiwei.colorpicker.R;
 import com.example.linshiwei.colorpicker.datasource.CollectedColor;
 import com.example.linshiwei.colorpicker.globalshared.OnItemClickListener;
+import com.yanzhenjie.recyclerview.swipe.SwipeMenuAdapter;
 
 import java.util.ArrayList;
 
@@ -18,7 +19,7 @@ import java.util.ArrayList;
  * Created by linshiwei on 2017/6/7.
  */
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemHolder> {
+public class RecyclerAdapter extends SwipeMenuAdapter<RecyclerAdapter.ItemHolder> {
     private static final String TAG = "RecyclerAdapter";
 
     private ArrayList<CollectedColor> mColors;
@@ -53,12 +54,27 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemHo
         mColors = colors;
     }
 
-    @Override
-    public RecyclerAdapter.ItemHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+//    @Override
+//    public RecyclerAdapter.ItemHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+//
+//        View inflatedView = LayoutInflater.from(parent.getContext())
+//                .inflate(R.layout.recycleview_item_row,parent,false);
+//        ItemHolder holder = new ItemHolder(inflatedView);
+//        holder.mListener = mOnItemClickListener;
+//        return holder;
+//    }
 
+
+    @Override
+    public View onCreateContentView(ViewGroup parent, int viewType) {
         View inflatedView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recycleview_item_row,parent,false);
-        ItemHolder holder = new ItemHolder(inflatedView);
+        return inflatedView;
+    }
+
+    @Override
+    public ItemHolder onCompatCreateViewHolder(View realContentView, int viewType) {
+        ItemHolder holder = new ItemHolder(realContentView);
         holder.mListener = mOnItemClickListener;
         return holder;
     }
