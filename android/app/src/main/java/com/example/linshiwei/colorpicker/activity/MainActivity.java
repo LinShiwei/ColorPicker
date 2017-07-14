@@ -126,6 +126,11 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
+                Intent intent2 = new Intent(this,PickColorActivity.class);
+                startActivity(intent2);
+                overridePendingTransition(R.animator.enter,R.animator.exit);
+
+
                 break;
             case R.id.rgb_hsv_button:
                 tapToChangeColorStyle(item);
@@ -224,7 +229,6 @@ public class MainActivity extends AppCompatActivity {
 
             // TODO 如果是删除：推荐调用Adapter.notifyItemRemoved(position)，不推荐Adapter.notifyDataSetChanged();
             if (menuPosition == 0) {// 删除按钮被点击。
-                mColors.remove(adapterPosition);
                 manager.deleteOneColor(mDbHelper, mColors.get(adapterPosition), new FinishCallBack() {
                     @Override
                     public void onFinish(Boolean success) {
@@ -236,6 +240,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
+                mColors.remove(adapterPosition);
                 mRecycleViewAdapter.notifyItemRemoved(adapterPosition);
             }
         }

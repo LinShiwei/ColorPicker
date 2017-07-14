@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.AddColorActivity"></activity>
+        <activity android:name=".activity.PickColorActivity"></activity>
     </application>
 
 </manifest>
